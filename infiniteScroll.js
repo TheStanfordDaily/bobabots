@@ -36,7 +36,7 @@ class InfiniteScroll {
             await randomSleep();
             if (this.currentScrollHeight === document.body.scrollHeight) {
                 this.numberOfTrials++;
-                console.log(`Is it already the end of the infinite scroll? ${MAXIMUM_NTRIALS - this.numberOfTrials} trials left.`);
+                console.log(`Bottom of scroll window detected. Will check for additional content ${MAXIMUM_NTRIALS - this.numberOfTrials} more time(s)...`);
             } else {
                 this.numberOfTrials = 0;
                 this.numberOfScrolls++;
@@ -48,7 +48,7 @@ class InfiniteScroll {
             }
         } else {
             console.log("We should be at the bottom of the infinite scroll. Done!");
-            console.log(this.numberOfScrolls + " scrolls were needed to load all results.");
+            console.log(`Loaded ${this.numberOfScrolls} pages for ${this.department}.`)
             console.log(this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML));
             this.resetFilter()
         }
@@ -68,7 +68,7 @@ class InfiniteScroll {
 
     resetFilter() {
         window.scrollTo(0, 0);
-        document.getElementById(CLEAR_ID).click(); 
+        document.getElementById(CLEAR_ID).click();
     }
 }
 
