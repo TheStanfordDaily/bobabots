@@ -25,7 +25,6 @@ class InfiniteScroll {
         this.resetFilter();
         this.simulateKeyboardEvent(FILTER_ID, department);
         this.currentScrollHeight = 0;
-        this.manualStop = false;
         this.numberOfScrolls = 0;
         this.numberOfTrials = 0;
     }
@@ -43,7 +42,7 @@ class InfiniteScroll {
                 this.numberOfScrolls++;
                 console.log(`Scroll ${this.numberOfScrolls} was successful!`);
             }
-            console.log(this.ranOver())
+
             if (!this.ranOver()) {
                 this.exhaust();
             }
