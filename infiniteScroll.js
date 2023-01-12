@@ -30,25 +30,30 @@ class InfiniteScroll {
     }
 
     async exhaust() {
+        if (this.numberOfTrials > MAXIMUM_NTRIALS) {
+            this.summarize()
+            return
+        }
+
         this.currentScrollHeight = document.body.scrollHeight
         window.scrollTo(0, this.currentScrollHeight)
         await randomSleep()
-
         if (this.currentScrollHeight === document.body.scrollHeight) {
             this.numberOfTrials++
             const attemptsRemaining = MAXIMUM_NTRIALS - this.numberOfTrials
-            let updateMessage = "Bottom of scroll window detected. Will check for additional content "
-            updateMessage += attemptsRemaining.toString() + " more time" + (attemptsRemaining === 1 ? "" : "s") + "..."
-            console.log(updateMessage)
+            let updateMessage = "Bottom of scroll window detected. Will check for additional content" + attemptsRemaining.toString() + " more time"
+            updateMessage += attemptsRemaining === 1 ? "..." : "s..."
+            console.log(`Bottom of scroll window detected. Will check for additional content ${MAXIMUM_NTRIALS - this.numberOfTrials} more time(s)...`)
         } else {
             this.numberOfTrials = 0
             this.numberOfScrolls++
             console.log(`Scroll ${this.numberOfScrolls} was successful!`)
-            if (!(this.ranOver() || this.numberOfTrials > MAXIMUM_NTRIALS)) {
-                this.exhaust()
-            } else {
-                this.summarize()
-            }
+        }
+
+        if (this.entriesRemain()) {
+            this.exhaust()
+        } else {
+            this.summarize()
         }
     }
 
@@ -58,9 +63,10 @@ class InfiniteScroll {
         console.log(this.href='data:text/htmlcharset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML))
     }
 
-    ranOver() {
+    entriesRemain() {
         const elements = Array.prototype.slice.call(document.getElementsByClassName(PERSON_DATA_CLASS))
-        return elements.length > 0 && !elements.every(element => element.innerText.includes(this.department))
+        // return whether every element has text containing this.department
+        return elements.every(element => element.innerText.includes(this.department))
     }
 
     simulateKeyboardEvent(id, text) {
@@ -76,5 +82,5 @@ class InfiniteScroll {
     }
 }
 
-const infiniteScroll = new InfiniteScroll("English")
+const infiniteScroll = new InfiniteScroll("Communication")
 infiniteScroll.exhaust()
