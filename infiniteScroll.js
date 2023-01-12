@@ -44,7 +44,7 @@ class InfiniteScroll {
             this.numberOfTrials = 0
             this.numberOfScrolls++
             console.log(`Scroll ${this.numberOfScrolls} was successful!`)
-            if (!this.ranOver() && this.numberOfTrials < MAXIMUM_NTRIALS) {
+            if (!(this.ranOver() || this.numberOfTrials > MAXIMUM_NTRIALS)) {
                 this.exhaust()
             } else {
                 this.summarize()
