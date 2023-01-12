@@ -30,28 +30,32 @@ class InfiniteScroll {
     }
 
     async exhaust() {
-        if (this.numberOfTrials < MAXIMUM_NTRIALS) {
-            this.currentScrollHeight = document.body.scrollHeight
-            window.scrollTo(0, this.currentScrollHeight)
-            await randomSleep()
-            if (this.currentScrollHeight === document.body.scrollHeight) {
-                this.numberOfTrials++
-                console.log(`Bottom of scroll window detected. Will check for additional content ${MAXIMUM_NTRIALS - this.numberOfTrials} more time(s)...`)
-            } else {
-                this.numberOfTrials = 0
-                this.numberOfScrolls++
-                console.log(`Scroll ${this.numberOfScrolls} was successful!`)
-            }
+        this.currentScrollHeight = document.body.scrollHeight
+        window.scrollTo(0, this.currentScrollHeight)
+        await randomSleep()
 
-            if (!this.ranOver()) {
-                this.exhaust()
-            }
+        if (this.currentScrollHeight === document.body.scrollHeight) {
+            this.numberOfTrials++
+            const attemptsRemaining = MAXIMUM_NTRIALS - this.numberOfTrials
+            let updateMessage = "Bottom of scroll window detected. Will check for additional content "
+            updateMessage += attemptsRemaining.toString() + " more time" + (attemptsRemaining === 1 ? "" : "s") + "..."
+            console.log(updateMessage)
         } else {
-            console.log("We should be at the bottom of the infinite scroll. Done!")
-            console.log(`Loaded ${this.numberOfScrolls} pages for ${this.department}.`)
-            console.log(this.href='data:text/htmlcharset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML))
-            this.resetFilter()
+            this.numberOfTrials = 0
+            this.numberOfScrolls++
+            console.log(`Scroll ${this.numberOfScrolls} was successful!`)
+            if (!this.ranOver() && this.numberOfTrials < MAXIMUM_NTRIALS) {
+                this.exhaust()
+            } else {
+                this.summarize()
+            }
         }
+    }
+
+    summarize() {
+        console.log("We should be at the bottom of the infinite scroll now. Done!")
+        console.log(`Loaded ${this.numberOfScrolls} pages for ${this.department}.`)
+        console.log(this.href='data:text/htmlcharset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML))
     }
 
     ranOver() {
