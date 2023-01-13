@@ -1,4 +1,4 @@
-const MAXIMUM_NTRIALS = 20
+const MAXIMUM_NTRIALS = 5
 const MINIMUM_SLEEP_MS = 500
 const MAXIMUM_SLEEP_MS = 2000
 const CLEAR_ID = "remove-filter193"
