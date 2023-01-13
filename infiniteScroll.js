@@ -81,5 +81,5 @@ const departments = ["English", "Music", "History"]
 
 for (let department of departments) {
     const infiniteScroll = new InfiniteScroll(department)
-    await infiniteScroll.exhaust()
+    await infiniteScroll.exhaust().catch(() => console.log(`Scrolling for ${department} failed.`))
 }
