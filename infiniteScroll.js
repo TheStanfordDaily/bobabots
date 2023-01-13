@@ -17,6 +17,35 @@ async function randomSleep() {
     return await sleep(randomDuration(MINIMUM_SLEEP_MS, MAXIMUM_SLEEP_MS))
 }
 
+// Source: http://bgrins.github.io/devtools-snippets/#console-save
+
+(function(console){
+
+    console.save = function(data, filename){
+    
+        if(!data) {
+            console.error('Console.save: No data')
+            return;
+        }
+    
+        if(!filename) filename = 'console.json'
+    
+        if(typeof data === "object"){
+            data = JSON.stringify(data, undefined, 4)
+        }
+    
+        var blob = new Blob([data], {type: 'text/json'}),
+            e    = document.createEvent('MouseEvents'),
+            a    = document.createElement('a')
+    
+        a.download = filename
+        a.href = window.URL.createObjectURL(blob)
+        a.dataset.downloadurl =  ['text/json', a.download, a.href].join(':')
+        e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
+        a.dispatchEvent(e)
+     }
+})(console)
+
 
 class InfiniteScroll {
     constructor(department) {
@@ -57,7 +86,7 @@ class InfiniteScroll {
     summarize() {
         console.log("We should be at the bottom of the infinite scroll now. Done!")
         console.log(`Loaded ${this.numberOfScrolls} pages for ${this.department}.`)
-        console.log(this.href='data:text/htmlcharset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML))
+        console.save(document.documentElement.outerHTML, `${this.department}.html`)
     }
 
     entriesRemain() {
@@ -81,5 +110,9 @@ const departments = ["English", "Music", "History"]
 
 for (let department of departments) {
     const infiniteScroll = new InfiniteScroll(department)
-    await infiniteScroll.exhaust().catch(error => console.log(`Scrolling for ${department} failed: ${error}`))
+    try {
+        await infiniteScroll.exhaust()
+    } catch (error) {
+        console.log(`Scrolling for ${department} failed: ${error}`)
+    }
 }
