@@ -21,9 +21,10 @@ async function randomSleep() {
 class InfiniteScroll {
     constructor(department) {
         console.log("Initializing infinite scroll...")
-        this.department = department
         this.resetFilter()
         this.simulateKeyboardEvent(FILTER_ID, department)
+
+        this.department = department
         this.currentScrollHeight = 0
         this.numberOfScrolls = 0
         this.numberOfTrials = 0
@@ -51,7 +52,7 @@ class InfiniteScroll {
         }
 
         if (this.entriesRemain()) {
-            this.exhaust()
+            await this.exhaust()
         } else {
             this.summarize()
         }
@@ -82,5 +83,9 @@ class InfiniteScroll {
     }
 }
 
-const infiniteScroll = new InfiniteScroll("Communication")
-infiniteScroll.exhaust()
+const depts = ["English", "Music", "History"]
+
+for (let i = 0; i < depts.length; i++) {
+    const infiniteScroll = new InfiniteScroll(depts[i])
+    await infiniteScroll.exhaust()
+}
