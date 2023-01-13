@@ -42,7 +42,7 @@ class InfiniteScroll {
         if (this.currentScrollHeight === document.body.scrollHeight) {
             this.numberOfTrials++
             const attemptsRemaining = MAXIMUM_NTRIALS - this.numberOfTrials
-            let updateMessage = "Bottom of scroll window detected. Will check for additional content" + attemptsRemaining.toString() + " more time"
+            let updateMessage = "Bottom of scroll window detected. Will check for additional content " + attemptsRemaining.toString() + " more time"
             updateMessage += attemptsRemaining === 1 ? "..." : "s..."
             console.log(updateMessage)
         } else {
