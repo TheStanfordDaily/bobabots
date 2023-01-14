@@ -83,7 +83,7 @@ class InfiniteScroll {
     summarize() {
         console.log("We should be at the bottom of the infinite scroll now. Done!")
         console.log(`Loaded ${this.numberOfScrolls} pages for ${this.department}.`)
-        console.save(document.documentElement.outerHTML, `${this.department}.html`)
+        console.save(document.documentElement.outerHTML, this.department + ".html")
     }
 
     entriesRemain() {
