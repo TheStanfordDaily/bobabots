@@ -19,7 +19,7 @@ async function randomSleep() {
 
 // Source: http://bgrins.github.io/devtools-snippets/#console-save
 
-(function(console){
+(function(console) {
     console.save = function(data, filename) {
         if (!data) {
             console.error("Console.save: No data")
