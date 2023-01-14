@@ -21,16 +21,16 @@ async function randomSleep() {
 
 (function(console){
     console.save = function(data, filename) {
-        if(!data) {
+        if (!data) {
             console.error("Console.save: No data")
             return
         }
 
-        if(!filename) {
+        if (!filename) {
             filename = "console.json"
         }
 
-        if(typeof data === "object") {
+        if (typeof data === "object") {
             data = JSON.stringify(data, undefined, 4)
         }
 
