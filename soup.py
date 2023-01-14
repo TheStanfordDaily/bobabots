@@ -22,9 +22,8 @@ class Profile:
     def __repr__(self):
         return self.__str__()
 
-FOLDER_PATH = "..\\..\\departments"
+FOLDER_PATH = "../../"
 def parse_files(folder_path):
-    profiles = []
     for filename in tqdm(os.listdir(folder_path), desc="Parsing files"):
         if filename.endswith(".html"):
             with open(os.path.join(folder_path, filename), "rb") as file:
@@ -51,11 +50,8 @@ def parse_files(folder_path):
                 role = main_data.find("div", attrs={"class": "person__data__role__title"})
                 affiliation = main_data.find("div", attrs={"class": "person__data__affiliation"})
                 department = main_data.find("div", attrs={"class": "person__data__department"})
-                result = Profile(name, sunet_id, email, phone, role, affiliation, department)
-                if result.name:
-                    profiles.append(result)
 
-    return profiles
+                yield Profile(name, sunet_id, email, phone, role, affiliation, department)
 
 def write_profiles(profiles):
     with open("profiles.csv", "w", newline="", encoding="utf-8") as file:
