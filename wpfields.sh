@@ -26,6 +26,7 @@ while true; do
         # Check against regular expression to ensure there exists a valid `_primary_term_category` value for this post.
         if [[ $primary_term_category =~ $digit ]]; then
             # Update the `rank_math_primary_category` field for the current post.
+            echo "Updating rank_math_primary_category for post ID $post with value $primary_term_category"
             vip @stanforddaily.preprod -- wp post meta update $post rank_math_primary_category $primary_term_category
         fi
     done
