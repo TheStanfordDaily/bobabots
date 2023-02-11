@@ -1,35 +1,12 @@
-# Initialize the batch starting point.
-offset=0
+# Read in post IDs from post_ids.txt
+while read post_id; do
+    echo "Post ID: $post_id"
+    # vip @stanforddaily.develop -- wp post meta get $post_id _primary_term_category >> with_cats.txt &
+    # Retrieve the _primary_term_category value for the post ID
+    primary_term_category=$(vip @stanforddaily.develop -- wp post meta get $post_id _primary_term_category) &
+    echo "Post ID: $post_id | Primary Term Category: $primary_term_category"
 
-# Initialize the batch size.
-batch_size=999
-digit="^[0-9]+$"
-batch="^[0-9]+"
-
-while true; do
-    # Get the IDs of the posts in the current batch.
-    posts=$(vip @stanforddaily.preprod -- wp post list --field=ID --offset=$offset --posts_per_page=$batch_size)
-    
-    # If there are no posts in the current batch, exit the loop.
-    if ! [[ $posts =~ $batch ]]; then
-        break
-    fi
-
-    echo "Processing posts $offset to $((offset + batch_size))"
-
-    # Loop through each post in the current batch.
-    for post in $posts; do
-        # Get the value of the `_primary_term_category` field for the current post.
-        echo "Processing post ID $post"
-        primary_term_category=$(vip @stanforddaily.preprod -- wp post meta get $post _primary_term_category)
-        
-        # Check against regular expression to ensure there exists a valid `_primary_term_category` value for this post.
-        if [[ $primary_term_category =~ $digit ]]; then
-            # Update the `rank_math_primary_category` field for the current post.
-            echo "Updating rank_math_primary_category for post ID $post with value $primary_term_category"
-            vip @stanforddaily.preprod -- wp post meta update $post rank_math_primary_category $primary_term_category
-        fi
-    done
-    # Move to the next batch.
-    offset=$((offset + batch_size))
-done
+    # Write the post ID and _primary_term_category value to with_cats.txt
+    # Remember to remove lines that have no _primary_term_category value
+    echo "vip @stanforddaily.develop -- wp post meta update $post_id rank_math_primary_category $primary_term_category" >> with_cats.sh &
+done < post_ids.txt
