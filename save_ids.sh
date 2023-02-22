@@ -17,8 +17,8 @@ while true; do
         break
     fi
 
-    # Write post IDs to post_ids_out.txt
-    echo "$posts" >> post_ids_out.txt
+    # Write post IDs to post_ids.txt
+    echo "$posts" >> post_ids.txt
 
     # Move to the next batch.
     offset=$((offset + batch_size))
