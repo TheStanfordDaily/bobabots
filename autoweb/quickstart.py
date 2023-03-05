@@ -55,39 +55,38 @@ def block_format(s):
     return final_result
 
 
-def fetch_doc():
+def fetch_doc(doc_id):
     # Basic Google Doc retrieval adapted from https://developers.google.com/docs/api/quickstart/python.
     creds = None
     # The file token.json stores the user"s access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists("token.json"):
-        creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+    if os.path.exists("../token.json"):
+        creds = Credentials.from_authorized_user_file(os.path.join(os.path.dirname(__file__), "..", "token.json"), SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file(os.path.join(os.path.dirname(__file__), "..", "credentials.json"), SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open("token.json", "w") as token:
+        with open(os.path.join(os.path.dirname(__file__), "..", "token.json"), "w") as token:
             token.write(creds.to_json())
 
     try:
         service = build("docs", "v1", credentials=creds)
 
         # Retrieve the documents contents from the Docs service.
-        document = service.documents().get(documentId=DOCUMENT_ID).execute()
+        document = service.documents().get(documentId=doc_id).execute()
 
         print("The title of the document is: {}".format(document.get("title")))
         # extract text runs
         content = document.get("body").get("content")
         text_runs = []
-        for i in content:
-            if i.get("paragraph"):
-                text_runs.append(i.get("paragraph").get("elements"))
-        # extract text
+        for element in content:
+            if element.get("paragraph"):
+                text_runs.append(element.get("paragraph").get("elements"))
         text = []
         for text_run in text_runs:
             for t in text_run:
@@ -103,4 +102,4 @@ def fetch_doc():
 
 
 if __name__ == "__main__":
-    print(fetch_doc())
+    print(fetch_doc(DOCUMENT_ID))
