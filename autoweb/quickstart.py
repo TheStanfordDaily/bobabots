@@ -10,13 +10,10 @@ from utils import load_env
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
-
-# The ID of a sample document.
-DOCUMENT_ID = "1_fKL7KMJ6wY_DfWUMWT0AGE9SPMXU-oWLf3nbYLI23A"
-
 CLIENT_KEY, CLIENT_SECRET = load_env()
 
-def generate_html(doc_info):
+
+def generate_html(doc_info) -> str:
     html = ""
 
     for item in doc_info:
@@ -43,22 +40,22 @@ def generate_html(doc_info):
     return html
 
 
-def block_format(s):
-    ghc = re.sub(r"<p>\s*</p>", "", s)
-    ghc = ghc.replace("<hr>", "")
-    final_result = ""
-    for line in ghc.split("\n"):
-        ii = line.replace("<p>", "").replace("</p>", "")
-        if paragraphs.string_is_sentence(ii.strip()):
-            final_result += f"<!-- wp:paragraph -->\n<p>{ii}</p>\n<!-- /wp:paragraph -->\n"
+def block_format(s) -> str:
+    block = re.sub(r"<p>\s*</p>", "", s)
+    block = block.replace("<hr>", "")
+    block_formatted = ""
+    for line in block.split("\n"):
+        element = line.replace("<p>", "").replace("</p>", "")
+        if paragraphs.string_is_sentence(element.strip()):
+            block_formatted += f"<!-- wp:paragraph -->\n<p>{element}</p>\n<!-- /wp:paragraph -->\n"
 
-    return final_result
+    return block_formatted
 
 
-def fetch_doc(doc_id):
+def fetch_doc(doc_id) -> dict:
     # Basic Google Doc retrieval adapted from https://developers.google.com/docs/api/quickstart/python.
     creds = None
-    # The file token.json stores the user"s access and refresh tokens, and is
+    # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
     if os.path.exists("../token.json"):
@@ -80,26 +77,6 @@ def fetch_doc(doc_id):
         # Retrieve the documents contents from the Docs service.
         document = service.documents().get(documentId=doc_id).execute()
 
-        print("The title of the document is: {}".format(document.get("title")))
-        # extract text runs
-        content = document.get("body").get("content")
-        text_runs = []
-        for element in content:
-            if element.get("paragraph"):
-                text_runs.append(element.get("paragraph").get("elements"))
-        text = []
-        for text_run in text_runs:
-            for t in text_run:
-                if t.get("textRun"):
-                    text.append(t.get("textRun").get("content").strip())
-
-        content_html = generate_html(content)
-        final_result = block_format(content_html)
-
-        return final_result
-    except HttpError as err:
-        print(err)
-
-
-if __name__ == "__main__":
-    print(fetch_doc(DOCUMENT_ID))
+        return document
+    except HttpError as error:
+        raise error
