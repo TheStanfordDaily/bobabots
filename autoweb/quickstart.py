@@ -22,6 +22,9 @@ def generate_html(doc_info) -> str:
         elif "paragraph" in item:
             content = ""
             for element in item["paragraph"]["elements"]:
+                # TODO: Also check for long spans of newlines or other related whitespace.
+                if "textRun" not in element:
+                    return html
                 text = element["textRun"]["content"]
                 style = element["textRun"]["textStyle"]
 
@@ -79,4 +82,4 @@ def fetch_doc(doc_id) -> dict:
 
         return document
     except HttpError as error:
-        raise error
+        print(f"An error occurred: {error}")
