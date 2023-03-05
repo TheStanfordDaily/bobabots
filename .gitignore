@@ -361,3 +361,5 @@ modules.xml
 vcs.xml
 inspectionProfiles/
 post_ids.txt
+credentials.json
+token.json

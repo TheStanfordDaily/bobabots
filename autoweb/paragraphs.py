@@ -13,8 +13,8 @@ def separate_paragraphs(body_text):
     return paragraph
 
 
-with open("", "r") as f:  # Replace the empty string with a path.
-    text = f.read()
+# with open("", "r") as f:  # Replace the empty string with a path.
+#     text = f.read()
 
 
 def string_is_sentence(s):
@@ -54,5 +54,5 @@ def validate_paragraphs(paragraphs):
     return result
 
 
-for para in validate_paragraphs(text):
-    print(para)
+# for para in validate_paragraphs(text):
+#     print(para)
