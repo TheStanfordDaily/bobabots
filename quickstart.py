@@ -42,6 +42,19 @@ def generate_html(doc_info):
 
     return html
 
+
+def block_format(s):
+    ghc = re.sub(r"<p>\s*</p>", "", s)
+    ghc = ghc.replace("<hr>", "")
+    final_result = ""
+    for line in ghc.split("\n"):
+        ii = line.replace("<p>", "").replace("</p>", "")
+        if paragraphs.string_is_sentence(ii.strip()):
+            final_result += f"<!-- wp:paragraph -->\n<p>{ii}</p>\n<!-- /wp:paragraph -->\n"
+
+    return final_result
+
+
 def fetch_doc():
     # Basic Google Doc retrieval adapted from https://developers.google.com/docs/api/quickstart/python.
     creds = None
@@ -81,15 +94,8 @@ def fetch_doc():
                 if t.get("textRun"):
                     text.append(t.get("textRun").get("content").strip())
 
-        ghc = generate_html(content)
-
-        ghc = re.sub(r"<p>\s*</p>", "", ghc)
-        ghc = ghc.replace("<hr>", "")
-        final_result = ""
-        for line in ghc.split("\n"):
-            ii = line.replace("<p>", "").replace("</p>", "")
-            if paragraphs.string_is_sentence(ii.strip()):
-                final_result += f"<!-- wp:paragraph -->\n<p>{ii}</p>\n<!-- /wp:paragraph -->\n"
+        content_html = generate_html(content)
+        final_result = block_format(content_html)
 
         return final_result
     except HttpError as err:
