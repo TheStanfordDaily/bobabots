@@ -31,3 +31,16 @@ def shell_script_append(path_in, path_out):
             if index % 4 == 0:
                 file_out.write("wait")
             file_out.write("\n")
+
+
+def load_env() -> tuple:
+    pairs = {}
+    with open(".env", "r", encoding="utf-8") as f:
+        for line in f:
+            key, value = line.split("=")
+            pairs[key] = value.strip().replace('"', "")
+
+    if "CLIENT_KEY" not in pairs or "CLIENT_SECRET" not in pairs:
+        raise Exception("No CLIENT_KEY or CLIENT_SECRET in .env")
+
+    return pairs["CLIENT_KEY"], pairs["CLIENT_SECRET"]
