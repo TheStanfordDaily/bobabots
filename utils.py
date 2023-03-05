@@ -17,3 +17,16 @@ def compare_folders(path1, path2):
             if os.path.exists(file2) and os.path.getsize(file1) < os.path.getsize(file2):
                 # File 2 is larger than File 1. Swapping.
                 swap_files(file2, file1)
+
+
+def load_env() -> tuple:
+    pairs = {}
+    with open(".env", "r", encoding="utf-8") as f:
+        for line in f:
+            key, value = line.split("=")
+            pairs[key] = value.strip().replace('"', "")
+
+    if "CLIENT_KEY" not in pairs or "CLIENT_SECRET" not in pairs:
+        raise Exception("No CLIENT_KEY or CLIENT_SECRET in .env")
+
+    return pairs["CLIENT_KEY"], pairs["CLIENT_SECRET"]

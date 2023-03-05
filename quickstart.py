@@ -1,14 +1,12 @@
-from __future__ import print_function
-from autoweb import paragraphs
-import os.path
+import os
 import re
-from bs4 import BeautifulSoup
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktParameters
+from autoweb import paragraphs
+from utils import load_env
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
@@ -16,38 +14,7 @@ SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
 # The ID of a sample document.
 DOCUMENT_ID = "1_fKL7KMJ6wY_DfWUMWT0AGE9SPMXU-oWLf3nbYLI23A"
 
-config = PunktParameters()
-config.abbrev_types = {
-    "jan", "feb", "aug", "sept",
-    "oct", "nov", "calif", "ph.d",
-    "sen", "sens", "j.d", "dr",
-    "u.s", "<em>", "</em>"
-}
-
-tokenizer = PunktSentenceTokenizer(config)
-def vpar(paragraph: str) -> str:
-    sentences = []
-    for t in tokenizer.tokenize(paragraph):
-        if paragraphs.string_is_sentence(t.strip()):
-            sentences.append(t)
-    return " ".join(sentences)
-
-def inverse_vpar(paragraph: str) -> str:
-    sentences = []
-    for t in tokenizer.tokenize(paragraph):
-        if not paragraphs.string_is_sentence(t.strip()):
-            # if contains no a, strong, or em tags
-            sentences.append(t)
-    return " ".join(sentences)
-def pvpar(soup: BeautifulSoup) -> BeautifulSoup:
-    result = BeautifulSoup()
-    for p in soup.find_all("p"):
-        vpr = vpar(p.text)
-        if len(vpr) > 0:
-            # add to result
-            result.append(BeautifulSoup(f"<p>{vpr}</p>", "html.parser"))
-    return result
-
+CLIENT_KEY, CLIENT_SECRET = load_env()
 
 def generate_html(doc_info):
     html = ""
@@ -63,7 +30,7 @@ def generate_html(doc_info):
 
                 if "link" in style:
                     href = style["link"]["url"]
-                    content += f"<a href=\"{href}\">{text}</a>"
+                    content += f'<a href="{href}">{text}</a>'
                 elif "italic" in style:
                     content += f"<em>{text}</em>"
                 elif "bold" in style:
@@ -109,15 +76,13 @@ def fetch_doc():
                 text_runs.append(i.get("paragraph").get("elements"))
         # extract text
         text = []
-        for i in text_runs:
-            for j in i:
-                if j.get("textRun"):
-                    text.append(j.get("textRun").get("content").strip())
-        # print(text)
-        # print(content)
+        for text_run in text_runs:
+            for t in text_run:
+                if t.get("textRun"):
+                    text.append(t.get("textRun").get("content").strip())
+
         ghc = generate_html(content)
-        # remove occurences of <p>\n</p>
-        # ghc = re.sub(r"<p></p>", "", ghc)
+
         ghc = re.sub(r"<p>\s*</p>", "", ghc)
         ghc = ghc.replace("<hr>", "")
         final_result = ""
@@ -125,18 +90,11 @@ def fetch_doc():
             ii = line.replace("<p>", "").replace("</p>", "")
             if paragraphs.string_is_sentence(ii.strip()):
                 final_result += f"<!-- wp:paragraph -->\n<p>{ii}</p>\n<!-- /wp:paragraph -->\n"
-        print(final_result)
 
-
-        # print(ghc_soup.prettify())
-        # validated_paragraphs = filter(lambda x: len(x) > 0, map(inverse_vpar, text))
-        # print(list(validated_paragraphs))
-        # for para in validated_paragraphs:
-        #     print(para)
-
+        return final_result
     except HttpError as err:
         print(err)
 
 
 if __name__ == "__main__":
-    fetch_doc()
+    print(fetch_doc())
