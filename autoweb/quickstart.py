@@ -25,12 +25,14 @@ def generate_html(doc_info) -> str:
         elif "paragraph" in item:
             content = ""
             for element in item["paragraph"]["elements"]:
+                # Check for a page break.
                 if "textRun" not in element:
                     return html
                 text = element["textRun"]["content"]
                 style = element["textRun"]["textStyle"]
                 if text == "\n":
                     newline_ticker += 1
+                    # Check for a long sequence of newlines.
                     if newline_ticker > NEWLINE_THRESHOLD:
                         return html
                 else:
@@ -78,7 +80,7 @@ def fetch_doc(doc_id) -> dict:
         else:
             flow = InstalledAppFlow.from_client_secrets_file(os.path.join(os.path.dirname(__file__), "..", "credentials.json"), SCOPES)
             creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
+        # Save the credentials for the next run.
         with open(os.path.join(os.path.dirname(__file__), "..", "token.json"), "w") as token:
             token.write(creds.to_json())
 

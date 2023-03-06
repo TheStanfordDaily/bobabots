@@ -8,6 +8,10 @@ from quickstart import generate_html, block_format
 from googleapiclient.errors import HttpError
 
 BASE_URL = "https://stanforddaily.com"
+HEADERS = {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+}
 CLIENT_KEY, CLIENT_SECRET = load_env()
 
 
@@ -42,37 +46,42 @@ class Webber:
             print("Invalid Google Doc URL")
 
     def get_gdoc_owner(self) -> tuple:
+        # TODO: Get email address of owner of Google Doc (heuristic for author of article).
+        pass
+
+    def get_wp_user(self) -> int:
         try:
-            # Get the document metadata.
-            metadata = self.gdoc.get("metadata")
+            email = self.get_gdoc_owner()[0]
+        except TypeError:
+            raise ValueError("No email address found for Google Doc owner")
 
-            # Extract the name and email address of the document owner.
-            owner = metadata["owners"][0]
-            name = owner.get("displayName")
-            email = owner.get("emailAddress")
+        response = requests.get(BASE_URL + "users?search=" + email)
 
-            return name, email
-        except HttpError as error:
-            print(f"An error occurred: {error}")
+        if response.status_code == 200:
+            users = response.json()
+            if len(users) > 0:
+                return users[0]["id"]  # Get the ID of the first user found.
 
-    # TODO: Write function to get author ID from email address of Google Doc owner.
+        raise ValueError(f"Request failed with status code {response.status_code}")
 
     def web(self) -> dict:
         endpoint = BASE_URL + "/wp-json/wp/v2/posts"
         wp_auth = HTTPBasicAuth(CLIENT_KEY, CLIENT_SECRET)
-
-        headers = {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-        }
-
         post_options = {
             "title": self.gdoc_title + " [autowebbed]",
             "content": self.blocks,
             "status": "draft"
         }
 
-        response = requests.request("POST", endpoint, data=json.dumps(post_options), headers=headers, auth=wp_auth)
+        try:
+            wp_user = self.get_wp_user()
+        except ValueError:
+            wp_user = None
+
+        if wp_user is not None:
+            post_options["author"] = wp_user
+
+        response = requests.request("POST", endpoint, data=json.dumps(post_options), headers=HEADERS, auth=wp_auth)
 
         return response.json()
 
