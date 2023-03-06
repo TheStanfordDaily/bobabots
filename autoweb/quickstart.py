@@ -7,9 +7,10 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from autoweb import paragraphs
 from utils import load_env
+from pprint import pprint
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
+SCOPES = ["https://www.googleapis.com/auth/documents.readonly", "https://www.googleapis.com/auth/gmail.readonly"]
 CLIENT_KEY, CLIENT_SECRET = load_env()
 NEWLINE_THRESHOLD = 4
 
@@ -65,31 +66,62 @@ def block_format(s) -> str:
     return block_formatted
 
 
-def fetch_doc(doc_id) -> dict:
+def load_creds() -> Credentials:
     # Basic Google Doc retrieval adapted from https://developers.google.com/docs/api/quickstart/python.
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists("../token.json"):
-        creds = Credentials.from_authorized_user_file(os.path.join(os.path.dirname(__file__), "..", "token.json"), SCOPES)
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "..", "token.json")):
+        creds = Credentials.from_authorized_user_file(os.path.join(os.path.dirname(__file__), "..", "token.json"),
+                                                      SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(os.path.join(os.path.dirname(__file__), "..", "credentials.json"), SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file(
+                os.path.join(os.path.dirname(__file__), "..", "credentials.json"), SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run.
         with open(os.path.join(os.path.dirname(__file__), "..", "token.json"), "w") as token:
             token.write(creds.to_json())
 
-    try:
-        service = build("docs", "v1", credentials=creds)
+    return creds
 
+
+def fetch_doc(doc_id) -> dict:
+    try:
+        service = build("docs", "v1", credentials=load_creds())
         # Retrieve the documents contents from the Docs service.
         document = service.documents().get(documentId=doc_id).execute()
 
         return document
     except HttpError as error:
-        print(f"An error occurred: {error}")
+        raise RuntimeError(f"Error fetching Google Doc: {error}")
+
+
+def fetch_inbox() -> list:
+    try:
+        # Call the Gmail API
+        service = build("gmail", "v1", credentials=load_creds())
+        messages = service.users().messages().list(userId="me", labelIds=["INBOX"]).execute()
+        message_ids = [x["id"] for x in messages["messages"]]
+        message_list = []
+        for message_id in message_ids[:10]:
+            message = service.users().messages().get(userId="me", id=message_id).execute()
+            headers = message["payload"]["headers"]
+            senders = [x["value"] for x in headers]
+            if any("@docs-share.google.com>" in s for s in senders):
+                # TODO: Add a condition to check whether this is a new message (i.e., not already in the database or a certain amount of time has passed)
+                message_list.append(message)
+
+        return message_list
+    except HttpError as error:
+        raise RuntimeError(f"Error fetching inbox: {error}")
+
+if __name__ == "__main__":
+    # pretty print
+    inbox_list = fetch_inbox()
+    pprint(inbox_list)
+    print(len(inbox_list))

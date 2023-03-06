@@ -43,7 +43,7 @@ class Webber:
         try:
             return re.findall(r"(?<=/d/)[^/]+", self.gdoc_url)[0]
         except IndexError:
-            print("Invalid Google Doc URL")
+            raise ValueError("Invalid Google Doc URL")
 
     def get_gdoc_owner(self) -> tuple:
         # TODO: Get email address of owner of Google Doc (heuristic for author of article).
