@@ -11,10 +11,13 @@ from utils import load_env
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
 CLIENT_KEY, CLIENT_SECRET = load_env()
+NEWLINE_THRESHOLD = 4
 
 
 def generate_html(doc_info) -> str:
     html = ""
+    # Check for long spans of newlines or other related whitespace.
+    newline_ticker = 0
 
     for item in doc_info:
         if "sectionBreak" in item:
@@ -22,11 +25,16 @@ def generate_html(doc_info) -> str:
         elif "paragraph" in item:
             content = ""
             for element in item["paragraph"]["elements"]:
-                # TODO: Also check for long spans of newlines or other related whitespace.
                 if "textRun" not in element:
                     return html
                 text = element["textRun"]["content"]
                 style = element["textRun"]["textStyle"]
+                if text == "\n":
+                    newline_ticker += 1
+                    if newline_ticker > NEWLINE_THRESHOLD:
+                        return html
+                else:
+                    newline_ticker = 0
 
                 if "link" in style:
                     href = style["link"]["url"]
