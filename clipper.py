@@ -118,15 +118,9 @@ class Clipper:
         self.doc.preamble.append(Command("postdate", NoEscape(r"\end{flushleft}")))
         self.doc.preamble.append(Command("usepackage", "graphicx"))
         self.doc.preamble.append(Command("pagenumbering", "gobble"))
-        # self.doc.preamble.append(Package("fancyhdr"))
-        # self.doc.preamble.append(Command('pagestyle', 'fancy'))
-        # self.doc.preamble.append(Command('fancyhf', ''))  # Clear default header and footer
-        # self.doc.preamble.append(Command('renewcommand', '\\headrulewidth', extra_arguments='0pt'))  # Remove header rule
-        # self.doc.preamble.append(Command('fancyhead', 'C', extra_arguments=NoEscape(r'\includegraphics[width=0.5in]{logo}')))
-        # print(NoEscape(r'\includegraphics[width=0.5in]{logo.png}'))
-        # self.doc.preamble.append(Command('renewcommand', NoEscape('\\headrulewidth'), extra_arguments='0pt'))
-
-        self.doc.preamble.append(Command("usepackage", "hyperref", options=NoEscape(r"colorlinks=true,urlcolor=blue")))
+        self.doc.packages.append(Package("xcolor"))
+        self.doc.preamble.append(NoEscape(r"\definecolor{accent}{HTML}{8C1515}"))
+        self.doc.preamble.append(Command("usepackage", "hyperref", options=NoEscape(r"colorlinks=true,allcolors=accent")))
         self.doc.preamble.append(Command("usepackage", "fontspec"))
         self.doc.preamble.append(Command("usepackage", "caption"))
         self.doc.preamble.append(Command("captionsetup", "labelformat=empty,width=140mm"))
@@ -168,8 +162,8 @@ def main():
         raise ValueError(f"Please provide article URL, ID or slug as the first positional argument.\n{error}")
     clipper = Clipper(article_url)
     doc = clipper.create_latex_document()
-    # Save the document using XeLaTeX engine (otherwise, custom fonts would not work).
 
+    # Save the document using XeLaTeX engine (otherwise, custom fonts would not work).
     doc.generate_pdf(clipper.slug, compiler="xelatex")
     # Move to out folder
     if not os.path.exists("out"):
