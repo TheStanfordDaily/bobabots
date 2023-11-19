@@ -2,7 +2,7 @@ import os
 import re
 import requests
 import sys
-from pylatex import Document, Section, Subsection, Package, Command, Figure, NewLine
+from pylatex import Document, Package, Command, Figure
 from pylatex.utils import italic, NoEscape
 from bs4 import BeautifulSoup, PageElement, Tag
 from utils import itemize, iso_to_ap
@@ -16,15 +16,6 @@ MINION_OPTIONS = {
     "ItalicFont": "*It",
     "BoldItalicFont": "*BoldIt"
 }
-
-
-class Author:
-    def __init__(self, name: str, url: str = ""):
-        self.name = name
-        self.url = url
-
-    def __str__(self):
-        return self.name
 
 
 class Clipper:
@@ -103,6 +94,7 @@ class Clipper:
         elif node.name == "figcaption":
             return ""  # Ignore captions, since they are handled by <img> tags.
         # TODO: Add support for other tags.
+        # For headings, we can use \section{} and \subsection{} (i.e., self.doc.create(Section())).
 
         return latex_content
 
@@ -132,25 +124,22 @@ class Clipper:
         self.doc.preamble.append(Command("setmainfont", "MinionPro", options=MINION_OPTIONS))
 
         try:
-            authors = [Author(name=n) for n in self.post_data[0]["parsely"]["meta"]["creator"]]
+            authors = [{"name": n} for n in self.post_data[0]["parsely"]["meta"]["creator"]]
             for index, author in enumerate(authors):
-                author.url = self.post_data[0]["_embedded"]["author"][index]["link"]
+                author["url"] = self.post_data[0]["_embedded"]["author"][index]["link"]
         except KeyError:
             # TODO: Use post["author"] or post["coauthors"] to fill in author names.
             authors = []
-        author_names = [NoEscape(Command("href", arguments=[NoEscape(a.url), a.name]).dumps()) for a
+        author_names = [NoEscape(Command("href", arguments=[NoEscape(a["url"]), a["name"]]).dumps()) for a
                         in authors]
         self.doc.preamble.append(Command("author", itemize(author_names)))
         self.doc.preamble.append(Command("date", iso_to_ap(self.post_data[0]["date"])))
-        self.doc.append(NoEscape(r"\maketitle"))
+        self.doc.append(NoEscape("\\maketitle"))
         soup = BeautifulSoup(self.post_data[0]["content"]["rendered"], "html.parser")
         parsed = self.parse_html(soup)
         # A bit of a hack, but it will do for now...
         parsed = parsed.replace("\\textbackslash{}", "\\").replace("\\{", "{").replace("\\}", "}")
         self.doc.append(NoEscape(parsed))
-        # print(NoEscape(parsed))
-        # might implement this later for h2 tags and whatnot
-        # with doc.create(Section('WordPress Post')):
 
         return self.doc
 
@@ -165,7 +154,6 @@ def main():
 
     # Save the document using XeLaTeX engine (otherwise, custom fonts would not work).
     doc.generate_pdf(clipper.slug, compiler="xelatex")
-    # Move to out folder
     if not os.path.exists("out"):
         os.mkdir("out")
     os.rename(f"{clipper.slug}.pdf", os.path.join("out", f"{clipper.slug}.pdf"))
