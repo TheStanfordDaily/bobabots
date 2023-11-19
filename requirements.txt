@@ -1,0 +1,6 @@
+requests
+pylatex
+bs4
+google
+google-api-python-client
+google_auth_oauthlib
