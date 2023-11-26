@@ -49,7 +49,7 @@ class Clipper:
 
     def parse_html(self, node: PageElement | Tag) -> str:
         if node.name is None:
-            return node.string
+            return node.string.replace("$", "\\$").replace("&", "\\&").replace("#", "\\#").replace("_", "\\_").replace("%", "\\%")
 
         latex_content = NoEscape("")
 
