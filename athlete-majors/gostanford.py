@@ -1,119 +1,88 @@
 import matplotlib.pyplot as plt
 import requests
 from bs4 import BeautifulSoup
-import xlsxwriter
+import pandas as pd
 from string import ascii_uppercase
+import json
+from tqdm import tqdm
+from Levenshtein import distance
 
-msports = ['baseball', 'mens-basketball', 'football', 'mens-golf', 'mens-gymnastics', 'mens-rowing', 'mens-soccer',
-           'mens-swimming-and-diving', 'mens-tennis', 'mens-volleyball', 'mens-water-polo', 'wrestling']
+with open("subjects.json") as file:
+    subject_abbreviations: dict[str, str] = json.load(file)
+    subject_abbreviations["Undeclared"] = "Undeclared"
 
-wsports = ['artswim', 'womens-basketball', 'womens-beach-volleyball', 'field-hockey', 'womens-golf', 'womens-gymnastics',
-          'womens-lacrosse', 'womens-rowing', 'womens-lightweight-rowing', 'womens-soccer', 'softball', 'womens-squash',
-          'womens-swimming-and-diving', 'womens-tennis', 'womens-volleyball', 'womens-water-polo']
-
-usports = ['cross-country', 'fencing', 'sailing', 'track-and-field']
-men = {}
-women = {}
-TOKEN_MAP = {"-": " ", "mens": "men\u2019s"}
+with open("roster-urls.json") as file:
+    roster_urls = json.load(file)
 
 
-class Athlete:
-    def __init__(self, name, sport, major):
-        self.name = name
-        self.sport = sport
-        self.major = major
+def player_profile(url: str) -> dict:
+    html_content = requests.get(url).text
+    soup = BeautifulSoup(html_content, "html.parser")
+    sidearm = soup.find("div", class_="sidearm-roster-player-fields")
+    if sidearm is None:
+        return {}
 
-
-class Sport:
-    def __init__(self, name, coed=False):
-        self.name = name
-        self.coed = coed  # Will use this information to alternate between a few lines of logic in roster function.
-
-    def url(self):
-        return "https://gostanford.com/sports/" + self.name + "/roster"
-
-    def roster(self):
-        page = requests.get(self.url())
-        soup = BeautifulSoup(page.content, 'html.parser')
-        player_blocks = soup.find('ul', attrs={'class': 'sidearm-roster-players'}) # .find_all("li", attrs={"class": "sidearm-roster-player"})
-        # for block in player_blocks.find_all("li", attrs={"class": "sidearm-roster-player"}):
-        #     print(block)
-        names = [x.find('h3').text.strip() for x in player_blocks.find_all('div', attrs={'class': 'sidearm-roster-player-name'})]
-        majors = [x.text.strip() for x in player_blocks.find_all('span', attrs={'class': 'sidearm-roster-player-major'})]
-        majors = [majors[i] for i in range(len(majors)) if i % 2 == 0]
-        print(len(names), "\t", len(majors))
-        players = {}
-        if len(names) == len(majors):
-            players = [Athlete(names[i], self.name, majors[i]) for i in range(len(names))]
-        return players
-
-
-def pruned(sport_name):
-    out = sport_name
-    for token, new_value in TOKEN_MAP.items():
-        out = out.replace(token, new_value)
-    return out
-
-
-def capitalized(sport_name):
-    return ' '.join(x.capitalize() if x != "and" else x for x in sport_name.split())
-
-
-for sport in msports:
-    cur = Sport(sport)
-    print("--- {} ---".format(sport.upper()))
-    cr = cur.roster()
-    for athlete in cr:
-        men[sport] = cr
-        print("{} is majoring in {}.".format(athlete.name, athlete.major))
-
-print(men)
-
-for sport in wsports:
-    cur = Sport(sport)
-    print("--- {} ---".format(sport.upper()))
-    cr = cur.roster()
-    for athlete in cr:
-        women[sport] = cr
-        print("{} is majoring in {}.".format(athlete.name, athlete.major))
-
-print(women)
-
-workbook = xlsxwriter.Workbook('major-data.xlsx')
-mworksheet = workbook.add_worksheet(name='Men')
-wworksheet = workbook.add_worksheet(name='Women')
-column = 0
-for key, value in men.items():
-    letter = ascii_uppercase[column]
-    mworksheet.write(letter + '1', key)
-    mworksheet.write_column(letter + '2', map(lambda a: a.major, value))
-    column += 1
-
-column = 0
-for key, value in women.items():
-    letter = ascii_uppercase[column]
-    wworksheet.write(letter + '1', key)
-    wworksheet.write_column(letter + '2', map(lambda a: a.major, value))
-    column += 1
-
-workbook.close()
-
-mmajors = {sport: [x.major for x in roster] for sport, roster in men.items()}
-mfreqs = {}
-
-for sport in msports:
     try:
-        for major in set(mmajors[sport]):
-            if sport not in mfreqs:
-                mfreqs[sport] = {}
-            mfreqs[sport][major] = mmajors[sport].count(major)
-            print("There are {} {} majors.".format(mmajors[sport].count(major), major))
-    except KeyError:
-        print("No major data available for {}.".format(sport))
+        major = sidearm.find("dt", text="Major").find_next_sibling("dd").text
+        name_sidearm = soup.find("span", class_="sidearm-roster-player-name")
+        first_name = name_sidearm.find("span", class_="sidearm-roster-player-first-name").text
+        last_name = name_sidearm.find("span", class_="sidearm-roster-player-last-name").text
+        academic_class = sidearm.find("dt", text="Class").find_next_sibling("dd").text
+    except AttributeError:
+        print(f"Failed to process {url}; skipping...")
+        return {}
 
-print(mfreqs)
+    return {
+        "First Name": first_name,
+        "Last Name": last_name,
+        "Class": academic_class,
+        "Major": major,
+    }
 
-for sport, freqs in mfreqs.items():
-    plt.pie(freqs.values(), labels=freqs.keys(), autopct="%1.1f%%")
-    plt.title(capitalized(pruned(sport)))
-    plt.show()
+
+def roster_dataset(url: str) -> pd.DataFrame:
+    if url == roster_urls["men"]["football"]:
+        with open("football.html") as file:
+            html_content = file.read()
+    else:
+        html_content = requests.get(url).text
+    soup = BeautifulSoup(html_content, "html.parser").find("div", class_="sidearm-roster-templates-container").find("section").find("ul", class_="sidearm-roster-players")
+
+    # Find all rows representing players on the team.
+    players = soup.find_all("li", class_="sidearm-roster-player")
+    player_data = []
+
+    for player in tqdm(players):
+        player_url = player["data-player-url"]
+        profile = player_profile(f"https://gostanford.com{player_url}")
+        profile["URL"] = player_url
+        player_data.append(profile)
+
+    return pd.DataFrame(player_data)
+
+
+def insert_abbreviations(path):
+    df = pd.read_csv(path)
+    abbrevs = []
+
+    for index, row in df.iterrows():
+        if row["Major"] not in subject_abbreviations:
+            if row.isna().any():
+                abbrevs.append("")
+                continue
+            print(f"Unknown major: {row['Major']}")
+            close_matches = list(filter(lambda s: distance(row["Major"], s) < 10, subject_abbreviations.keys()))
+            close_matches.sort(key=lambda s: distance(row["Major"], s))
+            if len(close_matches) > 0:
+                abbrevs.append(subject_abbreviations[close_matches[0]])
+                print("abbreviation successful", close_matches[0])
+            else:
+                abbrevs.append("")
+            continue
+        abbrevs.append(subject_abbreviations[row["Major"]])
+    df.insert(4, "Major (Abbreviated)", abbrevs, allow_duplicates=True)
+    # df.to_csv(path, index=False)
+    print(df.columns)
+    print(df[["Major", "Major (Abbreviated)"]])
+
+insert_abbreviations("men/football.csv")
