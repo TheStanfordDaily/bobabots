@@ -42,8 +42,11 @@ def player_profile(url: str) -> dict:
 
 def roster_dataset(url: str) -> pd.DataFrame:
     if url == roster_urls["men"]["football"]:
-        with open("football.html") as file:
-            html_content = file.read()
+        try:
+            with open("football.html") as file:
+                html_content = file.read()
+        except FileNotFoundError:
+            return pd.DataFrame()
     else:
         html_content = requests.get(url).text
     soup = BeautifulSoup(html_content, "html.parser").find("div", class_="sidearm-roster-templates-container").find("section").find("ul", class_="sidearm-roster-players")
