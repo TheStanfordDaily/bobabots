@@ -24,10 +24,19 @@ def player_profile(url: str) -> dict:
     if sidearm is None:
         return {}
 
+    major_abbrev = ""
+
     try:
         major = sidearm.find("dt", text="Major").find_next_sibling("dd").text
+        if major in subject_abbreviations:
+            major_abbrev = subject_abbreviations[major]
+        else:
+            close_matches = list(filter(lambda s: distance(major, s) < 10, subject_abbreviations.keys()))
+            close_matches.sort(key=lambda s: distance(major, s))
+            if len(close_matches) > 0:
+                major_abbrev = subject_abbreviations[close_matches[0]]
     except AttributeError:
-        major = "Undeclared"
+        major = ""
 
     name_sidearm = soup.find("span", class_="sidearm-roster-player-name")
     first_name = name_sidearm.find("span", class_="sidearm-roster-player-first-name").text
@@ -39,6 +48,7 @@ def player_profile(url: str) -> dict:
         "Last Name": last_name,
         "Class": academic_class,
         "Major": major,
+        "Major (Abbreviated)": major_abbrev,
     }
 
 
@@ -90,31 +100,6 @@ def insert_abbreviations(path):
     df.insert(4, "Major (Abbreviated)", abbrevs, allow_duplicates=True)
     df.to_csv(path, index=False)
 
-# for group_name, roster_group in roster_urls.items():
-#     for sport, url in roster_group.items():
-#         df = roster_dataset(url)
-#         df.to_csv(f"{group_name}/{sport}.csv", index=False)
-#         insert_abbreviations(f"{group_name}/{sport}.csv")
-
-# Step 1: Read all CSV files into pandas DataFrames
-
-# Define patterns for each folder
-patterns = ['men/*.csv', 'women/*.csv', 'mixed/*.csv']
-
-list_of_dfs = []
-
-for pattern in patterns:
-    csv_files = glob(pattern)
-    for filename in csv_files:
-        df = pd.read_csv(filename)
-
-        # Filter out rows where "Class" contains "Graduate" or "graduate"
-        df = df[~df['Class'].str.contains("Graduate", case=False)]
-
-        # Extract the sport from the URL
-        df['Sport'] = df['URL'].apply(lambda x: x.split('/')[2].replace('-', ' ').title().replace("Mens", "Men\u2019s").replace("Womens", "Women\u2019s"))
-        list_of_dfs.append(df)
-
 
 def simplified_majors(major_counts):
     # Sort and identify the top 10 most common majors
@@ -132,29 +117,60 @@ def simplified_majors(major_counts):
 
     return result
 
-# Concatenate all DataFrames into a single DataFrame
-all_data = pd.concat(list_of_dfs, ignore_index=True)
 
-# Use "Major (Abbreviated)" if it's not empty; otherwise use "Major"
-all_data['Major'] = all_data.apply(lambda x: x['Major (Abbreviated)'] if x['Major (Abbreviated)'] != '' else x['Major'],
-                                   axis=1)
+def format_to_flourish():
+    # Define patterns for each folder
+    patterns = ['men/*.csv', 'women/*.csv', 'mixed/*.csv']
 
-# Group the data by 'Major' and count the total number of athletes
-major_counts = all_data.groupby('Major').size().reset_index(name='Total Athletes')
+    list_of_dfs = []
 
-simplified_majors = simplified_majors(major_counts)
-simplified_majors.to_csv('simplified_majors.csv', index=False)
+    for pattern in patterns:
+        csv_files = glob(pattern)
+        for filename in csv_files:
+            df = pd.read_csv(filename)
 
-# Sort by 'Major'
-sorted_major_counts = major_counts.sort_values('Major')
-sorted_major_counts.to_csv('major_counts.csv', index=False)
+            # Filter out rows where "Class" contains "Graduate" or "graduate"
+            df = df[~df['Class'].str.contains("Graduate", case=False)]
 
-# Group the data by 'Major' and 'Sport' and count the occurrences.
-grouped_data = all_data.groupby(['Major', 'Sport']).size().reset_index(name='Count')
+            # Extract the sport from the URL
+            df['Sport'] = df['URL'].apply(lambda x: x.split('/')[2].replace('-', ' ').title().replace("Mens", "Men\u2019s").replace("Womens", "Women\u2019s"))
+            list_of_dfs.append(df)
 
-# Pivot the table to have majors as rows and sports as columns.
-pivot_table = grouped_data.pivot(index='Major', columns='Sport', values='Count').drop("Undeclared")
+    # Concatenate all DataFrames into a single DataFrame
+    all_data = pd.concat(list_of_dfs, ignore_index=True)
 
-# Sort the DataFrame by 'Major' and export
-sorted_pivot_table = pivot_table.sort_index()
-sorted_pivot_table.to_csv('majors_and_sports.csv')
+    # Use "Major (Abbreviated)" if it's not empty; otherwise use "Major"
+    all_data['Major'] = all_data.apply(lambda x: x['Major (Abbreviated)'] if x['Major (Abbreviated)'] != '' else x['Major'],
+                                       axis=1)
+
+    # Group the data by 'Major' and count the total number of athletes
+    major_counts = all_data.groupby('Major').size().reset_index(name='Total Athletes')
+
+    simplified = simplified_majors(major_counts)
+    simplified.to_csv('simplified_majors.csv', index=False)
+
+    # Sort by 'Major'
+    sorted_major_counts = major_counts.sort_values('Major')
+    sorted_major_counts.to_csv('major_counts.csv', index=False)
+
+    # Group the data by 'Major' and 'Sport' and count the occurrences.
+    grouped_data = all_data.groupby(['Major', 'Sport']).size().reset_index(name='Count')
+
+    # Pivot the table to have majors as rows and sports as columns.
+    pivot_table = grouped_data.pivot(index='Major', columns='Sport', values='Count').drop("Undeclared")
+
+    # Sort the DataFrame by 'Major' and export
+    sorted_pivot_table = pivot_table.sort_index()
+    sorted_pivot_table.to_csv('majors_and_sports.csv')
+
+
+def main():
+    for group_name, roster_group in roster_urls.items():
+        for sport, url in roster_group.items():
+            df = roster_dataset(url)
+            df.to_csv(f"{group_name}/{sport}.csv", index=False)
+            # insert_abbreviations(f"{group_name}/{sport}.csv")
+
+
+if __name__ == "__main__":
+    main()
