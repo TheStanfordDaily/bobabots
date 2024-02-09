@@ -8,7 +8,7 @@ from tqdm import tqdm
 from Levenshtein import distance
 
 with open("subjects.json") as file:
-    subject_abbreviations: dict[str, str] = json.load(file)
+    subject_abbreviations = json.load(file)
     subject_abbreviations["Undeclared"] = "Undeclared"
 
 with open("roster-urls.json") as file:
@@ -19,6 +19,7 @@ def player_profile(url: str) -> dict:
     html_content = requests.get(url).text
     soup = BeautifulSoup(html_content, "html.parser")
     sidearm = soup.find("div", class_="sidearm-roster-player-fields")
+
     if sidearm is None:
         return {}
 
@@ -82,10 +83,8 @@ def insert_abbreviations(path):
             else:
                 abbrevs.append("")
             continue
-        abbrevs.append(subject_abbreviations[row["Major"]])
-    df.insert(4, "Major (Abbreviated)", abbrevs, allow_duplicates=True)
-    # df.to_csv(path, index=False)
-    print(df.columns)
-    print(df[["Major", "Major (Abbreviated)"]])
 
-insert_abbreviations("men/football.csv")
+        abbrevs.append(subject_abbreviations[row["Major"]])
+
+    df.insert(4, "Major (Abbreviated)", abbrevs, allow_duplicates=True)
+    df.to_csv(path, index=False)

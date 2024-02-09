@@ -1,23 +1,23 @@
-First Name,Last Name,Class,Major,URL
-Nolan,Krutonog,Senior,Computer Science,/sports/mens-water-polo/roster/nolan-krutonog/20035
-Griffen,Price,Redshirt Freshman,Undeclared,/sports/mens-water-polo/roster/griffen-price/20045
-Liam,Harrison,Junior,Undeclared,/sports/mens-water-polo/roster/liam-harrison/20919
-Grant,Watson,Redshirt Sophomore,Economics,/sports/mens-water-polo/roster/grant-watson/20046
-Jack,Merrill,Redshirt Freshman,Undeclared,/sports/mens-water-polo/roster/jack-merrill/20041
-Elai,Ben-Gal,Freshman,Undeclared,/sports/mens-water-polo/roster/elai-ben-gal/20686
-Chase,McFarland,Sophomore,Undeclared,/sports/mens-water-polo/roster/chase-mcfarland/20040
-Alex,Gheorghe,Freshman,Undeclared,/sports/mens-water-polo/roster/alex-gheorghe/20687
-CJ,Indart,Redshirt Sophomore,Computer Science,/sports/mens-water-polo/roster/cj-indart/20033
-Riley,Pittman,Senior,Computer Science,/sports/mens-water-polo/roster/riley-pittman/20044
-Ethan,Parrish,Senior,Sociology,/sports/mens-water-polo/roster/ethan-parrish/20043
-Andrew,Churukian,Graduate Student,Bioengineering,/sports/mens-water-polo/roster/andrew-churukian/20047
-Daniel,Mnatsakanian,Freshman,Undeclared,/sports/mens-water-polo/roster/daniel-mnatsakanian/20689
-Tanner,Pulice,Junior,Sociology,/sports/mens-water-polo/roster/tanner-pulice/20690
-Gavin,West,Freshman,Undeclared,/sports/mens-water-polo/roster/gavin-west/20692
-Christopher,Arakelian,Freshman,Undeclared,/sports/mens-water-polo/roster/christopher-arakelian/20685
-Soren,Jensen,Senior,Management Science & Engineering,/sports/mens-water-polo/roster/soren-jensen/20034
-Speedy,Laster,Redshirt Sophomore,Public Policy,/sports/mens-water-polo/roster/speedy-laster/20036
-Jackson,Painter,Senior,Mechanical Engineering,/sports/mens-water-polo/roster/jackson-painter/20042
-Guido,Leonardi,Redshirt Freshman,Undeclared,/sports/mens-water-polo/roster/guido-leonardi/20037
-Konstantinos,Mathiopoulos,Freshman,Undeclared,/sports/mens-water-polo/roster/konstantinos-mathiopoulos/20688
-Harrison,Rohlen,Freshman,Undeclared,/sports/mens-water-polo/roster/harrison-rohlen/20691
+First Name,Last Name,Class,Major,Major (Abbreviated),URL
+Nolan,Krutonog,Senior,Computer Science,CS,/sports/mens-water-polo/roster/nolan-krutonog/20035
+Griffen,Price,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/griffen-price/20045
+Liam,Harrison,Junior,Undeclared,Undeclared,/sports/mens-water-polo/roster/liam-harrison/20919
+Grant,Watson,Redshirt Sophomore,Economics,ECON,/sports/mens-water-polo/roster/grant-watson/20046
+Jack,Merrill,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/jack-merrill/20041
+Elai,Ben-Gal,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/elai-ben-gal/20686
+Chase,McFarland,Sophomore,Undeclared,Undeclared,/sports/mens-water-polo/roster/chase-mcfarland/20040
+Alex,Gheorghe,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/alex-gheorghe/20687
+CJ,Indart,Redshirt Sophomore,Computer Science,CS,/sports/mens-water-polo/roster/cj-indart/20033
+Riley,Pittman,Senior,Computer Science,CS,/sports/mens-water-polo/roster/riley-pittman/20044
+Ethan,Parrish,Senior,Sociology,SOC,/sports/mens-water-polo/roster/ethan-parrish/20043
+Andrew,Churukian,Graduate Student,Bioengineering,BIOE,/sports/mens-water-polo/roster/andrew-churukian/20047
+Daniel,Mnatsakanian,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/daniel-mnatsakanian/20689
+Tanner,Pulice,Junior,Sociology,SOC,/sports/mens-water-polo/roster/tanner-pulice/20690
+Gavin,West,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/gavin-west/20692
+Christopher,Arakelian,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/christopher-arakelian/20685
+Soren,Jensen,Senior,Management Science & Engineering,MS&E,/sports/mens-water-polo/roster/soren-jensen/20034
+Speedy,Laster,Redshirt Sophomore,Public Policy,PUBLPOL,/sports/mens-water-polo/roster/speedy-laster/20036
+Jackson,Painter,Senior,Mechanical Engineering,ME,/sports/mens-water-polo/roster/jackson-painter/20042
+Guido,Leonardi,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/guido-leonardi/20037
+Konstantinos,Mathiopoulos,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/konstantinos-mathiopoulos/20688
+Harrison,Rohlen,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/harrison-rohlen/20691

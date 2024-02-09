@@ -1,30 +1,30 @@
-First Name,Last Name,Class,Major,URL
-Noah,Adnan,Senior,Management Science & Engineering,/sports/mens-soccer/roster/noah-adnan/20146
-Conner,Maurer,Senior,Economics,/sports/mens-soccer/roster/conner-maurer/20161
-Nolan,Evers,Redshirt Senior,"GR: Community Health and Prevention Research, UG: Human Biology",/sports/mens-soccer/roster/nolan-evers/20155
-Mark,Fisher,Redshirt Senior,Bioengineering,/sports/mens-soccer/roster/mark-fisher/20156
-Fletcher,Bank,Sophomore,Undeclared,/sports/mens-soccer/roster/fletcher-bank/20147
-Will,Reilly,Junior,Symbolic Systems,/sports/mens-soccer/roster/will-reilly/20165
-Jackson,Kiil,Redshirt Sophomore,"Science, Technology & Society",/sports/mens-soccer/roster/jackson-kiil/20159
-Zach,Bohane,Sophomore,Undeclared,/sports/mens-soccer/roster/zach-bohane/20149
-Alfonso,Tenconi-Gradillas,Redshirt Freshman,Undeclared,/sports/mens-soccer/roster/alfonso-tenconi-gradillas/20168
-Shane,de Flores,Redshirt Sophomore,"Science, Technology & Society",/sports/mens-soccer/roster/shane-de-flores/20151
-Liam,Doyle,Sophomore,Undeclared,/sports/mens-soccer/roster/liam-doyle/20152
-Will,Cleary,Sophomore,Undeclared,/sports/mens-soccer/roster/will-cleary/20150
-Layton,Purchase,Senior,Economics,/sports/mens-soccer/roster/layton-purchase/20164
-Connor,Evans,Redshirt Junior,Management Science & Engineering,/sports/mens-soccer/roster/connor-evans/20154
-Aiden,Weaver,Senior,Bioengineering,/sports/mens-soccer/roster/aiden-weaver/20169
-Duncan,Jarvie,Freshman,Undeclared,/sports/mens-soccer/roster/duncan-jarvie/20170
-Louis,Weisdorf,Junior,Psychology,/sports/mens-soccer/roster/louis-weisdorf/20171
-Ryan,Dunn,Senior,Computer Science,/sports/mens-soccer/roster/ryan-dunn/20153
-Nico Rei,McMillan,Redshirt Sophomore,Economics,/sports/mens-soccer/roster/nico-rei-mcmillan/20162
-Kwabena,Kwakwa,Redshirt Sophomore,Political Science,/sports/mens-soccer/roster/kwabena-kwakwa/20160
-Rafael,Pfauser,Freshman,Undeclared,/sports/mens-soccer/roster/rafael-pfauser/20172
-Dylan,Hooper,Redshirt Freshman,Undeclared,/sports/mens-soccer/roster/dylan-hooper/20157
-Dylan,Groeneveld,Freshman,Undeclared,/sports/mens-soccer/roster/dylan-groeneveld/20173
-Palmer,Bank,Redshirt Freshman,Undeclared,/sports/mens-soccer/roster/palmer-bank/20148
-Takashi,Sasaki,Redshirt Freshman,Undeclared,/sports/mens-soccer/roster/takashi-sasaki/20166
-Eliot,Jones,Senior,"GR: Computer Science, UG: Mathematical and Computational Science",/sports/mens-soccer/roster/eliot-jones/20158
-Rowan,Schnebly,Redshirt Freshman,Undeclared,/sports/mens-soccer/roster/rowan-schnebly/20167
-Jack,Morris,Redshirt Sophomore,Computer Science,/sports/mens-soccer/roster/jack-morris/20163
-James,Swomley,Graduate Student,Computational and Mathematical Engineering,/sports/mens-soccer/roster/james-swomley/20174
+First Name,Last Name,Class,Major,Major (Abbreviated),URL
+Noah,Adnan,Senior,Management Science & Engineering,MS&E,/sports/mens-soccer/roster/noah-adnan/20146
+Conner,Maurer,Senior,Economics,ECON,/sports/mens-soccer/roster/conner-maurer/20161
+Nolan,Evers,Redshirt Senior,"GR: Community Health and Prevention Research, UG: Human Biology",,/sports/mens-soccer/roster/nolan-evers/20155
+Mark,Fisher,Redshirt Senior,Bioengineering,BIOE,/sports/mens-soccer/roster/mark-fisher/20156
+Fletcher,Bank,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/fletcher-bank/20147
+Will,Reilly,Junior,Symbolic Systems,SYMSYS,/sports/mens-soccer/roster/will-reilly/20165
+Jackson,Kiil,Redshirt Sophomore,"Science, Technology & Society",STS,/sports/mens-soccer/roster/jackson-kiil/20159
+Zach,Bohane,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/zach-bohane/20149
+Alfonso,Tenconi-Gradillas,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/alfonso-tenconi-gradillas/20168
+Shane,de Flores,Redshirt Sophomore,"Science, Technology & Society",STS,/sports/mens-soccer/roster/shane-de-flores/20151
+Liam,Doyle,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/liam-doyle/20152
+Will,Cleary,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/will-cleary/20150
+Layton,Purchase,Senior,Economics,ECON,/sports/mens-soccer/roster/layton-purchase/20164
+Connor,Evans,Redshirt Junior,Management Science & Engineering,MS&E,/sports/mens-soccer/roster/connor-evans/20154
+Aiden,Weaver,Senior,Bioengineering,BIOE,/sports/mens-soccer/roster/aiden-weaver/20169
+Duncan,Jarvie,Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/duncan-jarvie/20170
+Louis,Weisdorf,Junior,Psychology,PSYCH,/sports/mens-soccer/roster/louis-weisdorf/20171
+Ryan,Dunn,Senior,Computer Science,CS,/sports/mens-soccer/roster/ryan-dunn/20153
+Nico Rei,McMillan,Redshirt Sophomore,Economics,ECON,/sports/mens-soccer/roster/nico-rei-mcmillan/20162
+Kwabena,Kwakwa,Redshirt Sophomore,Political Science,POLISCI,/sports/mens-soccer/roster/kwabena-kwakwa/20160
+Rafael,Pfauser,Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/rafael-pfauser/20172
+Dylan,Hooper,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/dylan-hooper/20157
+Dylan,Groeneveld,Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/dylan-groeneveld/20173
+Palmer,Bank,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/palmer-bank/20148
+Takashi,Sasaki,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/takashi-sasaki/20166
+Eliot,Jones,Senior,"GR: Computer Science, UG: Mathematical and Computational Science",,/sports/mens-soccer/roster/eliot-jones/20158
+Rowan,Schnebly,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/rowan-schnebly/20167
+Jack,Morris,Redshirt Sophomore,Computer Science,CS,/sports/mens-soccer/roster/jack-morris/20163
+James,Swomley,Graduate Student,Computational and Mathematical Engineering,CME,/sports/mens-soccer/roster/james-swomley/20174

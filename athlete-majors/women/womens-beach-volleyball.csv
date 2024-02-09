@@ -1,25 +1,25 @@
-First Name,Last Name,Class,Major,URL
-Line,Andersson,Sophomore,Undeclared,/sports/womens-beach-volleyball/roster/line-andersson/20452
-Kelly,Belardi,Sophomore,Undeclared,/sports/womens-beach-volleyball/roster/kelly-belardi/20453
-Kate,Bierly,Graduate Student,Policy/Organization/Leadership,/sports/womens-beach-volleyball/roster/kate-bierly/20454
-Phoenix,Clarke,Sophomore,Undeclared,/sports/womens-beach-volleyball/roster/phoenix-clarke/20455
-Abby,Converse,Senior,Neurobiology,/sports/womens-beach-volleyball/roster/abby-converse/20456
-Camdyn,Doucet,Junior,Design,/sports/womens-beach-volleyball/roster/camdyn-doucet/20457
-Ellie,Gamberdella,Senior,Psychology,/sports/womens-beach-volleyball/roster/ellie-gamberdella/20458
-Daria,Gusarova,Sophomore,Undeclared,/sports/womens-beach-volleyball/roster/daria-gusarova/20459
-Maya,Harvey,Senior,Computer Science (BS) / Computer Science (MS),/sports/womens-beach-volleyball/roster/maya-harvey/20460
-Xolani,Hodel,Senior,Product Design,/sports/womens-beach-volleyball/roster/xolani-hodel/20461
-Chloe,Hoffman,Freshman,Undeclared,/sports/womens-beach-volleyball/roster/chloe-hoffman/20471
-Asha,Johnson,Senior,Computer Science/Neurocognitive Science (B.S.)/Management Science and Engineering (M.S.),/sports/womens-beach-volleyball/roster/asha-johnson/20462
-Sophie,Kubiak,Sophomore,Undeclared,/sports/womens-beach-volleyball/roster/sophie-kubiak/20463
-Emma,Morris,Redshirt Sophomore,Computer Science,/sports/womens-beach-volleyball/roster/emma-morris/20464
-Kate,Reilly,Senior,Mechanical Engineering,/sports/womens-beach-volleyball/roster/kate-reilly/20465
-Brooke,Rockwell,Freshman,Undeclared,/sports/womens-beach-volleyball/roster/brooke-rockwell/20472
-Ellie,Sampson,Freshman,Undeclared,/sports/womens-beach-volleyball/roster/ellie-sampson/20473
-Emmy,Sharp,Senior,Product Design,/sports/womens-beach-volleyball/roster/emmy-sharp/20466
-Ruby,Sorra,Freshman,Undeclared,/sports/womens-beach-volleyball/roster/ruby-sorra/20474
-Clara,Stowell,Freshman,Undeclared,/sports/womens-beach-volleyball/roster/clara-stowell/20475
-Serena,Turner,Junior,Neuroscience,/sports/womens-beach-volleyball/roster/serena-turner/20467
-Avi,Vetter,Junior,Economics,/sports/womens-beach-volleyball/roster/avi-vetter/20468
-Ashley,Vincent,Sophomore,Undeclared,/sports/womens-beach-volleyball/roster/ashley-vincent/20469
-Taylor,Wilson,Junior,Management Science and Engineering,/sports/womens-beach-volleyball/roster/taylor-wilson/20470
+First Name,Last Name,Class,Major,Major (Abbreviated),URL
+Line,Andersson,Sophomore,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/line-andersson/20452
+Kelly,Belardi,Sophomore,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/kelly-belardi/20453
+Kate,Bierly,Graduate Student,Policy/Organization/Leadership,,/sports/womens-beach-volleyball/roster/kate-bierly/20454
+Phoenix,Clarke,Sophomore,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/phoenix-clarke/20455
+Abby,Converse,Senior,Neurobiology,NBIO,/sports/womens-beach-volleyball/roster/abby-converse/20456
+Camdyn,Doucet,Junior,Design,DESIGN,/sports/womens-beach-volleyball/roster/camdyn-doucet/20457
+Ellie,Gamberdella,Senior,Psychology,PSYCH,/sports/womens-beach-volleyball/roster/ellie-gamberdella/20458
+Daria,Gusarova,Sophomore,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/daria-gusarova/20459
+Maya,Harvey,Senior,Computer Science (BS) / Computer Science (MS),,/sports/womens-beach-volleyball/roster/maya-harvey/20460
+Xolani,Hodel,Senior,Product Design,DESIGN,/sports/womens-beach-volleyball/roster/xolani-hodel/20461
+Chloe,Hoffman,Freshman,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/chloe-hoffman/20471
+Asha,Johnson,Senior,Computer Science/Neurocognitive Science (B.S.)/Management Science and Engineering (M.S.),,/sports/womens-beach-volleyball/roster/asha-johnson/20462
+Sophie,Kubiak,Sophomore,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/sophie-kubiak/20463
+Emma,Morris,Redshirt Sophomore,Computer Science,CS,/sports/womens-beach-volleyball/roster/emma-morris/20464
+Kate,Reilly,Senior,Mechanical Engineering,ME,/sports/womens-beach-volleyball/roster/kate-reilly/20465
+Brooke,Rockwell,Freshman,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/brooke-rockwell/20472
+Ellie,Sampson,Freshman,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/ellie-sampson/20473
+Emmy,Sharp,Senior,Product Design,DESIGN,/sports/womens-beach-volleyball/roster/emmy-sharp/20466
+Ruby,Sorra,Freshman,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/ruby-sorra/20474
+Clara,Stowell,Freshman,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/clara-stowell/20475
+Serena,Turner,Junior,Neuroscience,DATASCI,/sports/womens-beach-volleyball/roster/serena-turner/20467
+Avi,Vetter,Junior,Economics,ECON,/sports/womens-beach-volleyball/roster/avi-vetter/20468
+Ashley,Vincent,Sophomore,Undeclared,Undeclared,/sports/womens-beach-volleyball/roster/ashley-vincent/20469
+Taylor,Wilson,Junior,Management Science and Engineering,MS&E,/sports/womens-beach-volleyball/roster/taylor-wilson/20470

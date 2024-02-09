@@ -1,31 +1,31 @@
-First Name,Last Name,Class,Major,URL
-Kannan,Alford,Freshman,undeclared,/sports/mens-rowing/roster/kannan-alford/20711
-Schuyler,Audley-Williams,Freshman,undeclared,/sports/mens-rowing/roster/schuyler-audley-williams/20712
-Kyle,Bergstedt,Senior,Chemical Engineering,/sports/mens-rowing/roster/kyle-bergstedt/20671
-Callen,Berwick,Freshman,undeclared,/sports/mens-rowing/roster/callen-berwick/20713
-Fleur,Blase,Freshman,undeclared,/sports/mens-rowing/roster/fleur-blase/20714
-Tom,Corbett,Freshman,undeclared,/sports/mens-rowing/roster/tom-corbett/20715
-Ben,Felter,Senior,Computer Science,/sports/mens-rowing/roster/ben-felter/20616
-James,Fetter,Junior,Computer Science,/sports/mens-rowing/roster/james-fetter/20618
-Wilder,Fulford,Freshman,undeclared,/sports/mens-rowing/roster/wilder-fulford/20929
-Caspar,Griffin,Sophomore,undeclared,/sports/mens-rowing/roster/caspar-griffin/20619
-Jack,Griffin,Freshman,undeclared,/sports/mens-rowing/roster/jack-griffin/20930
-Joseph,Guman,Senior,Computer Science,/sports/mens-rowing/roster/joseph-guman/20620
-Hylton,Harvey,Freshman,undeclared,/sports/mens-rowing/roster/hylton-harvey/20716
-Lucas,Johnson,Sophomore,undeclared,/sports/mens-rowing/roster/lucas-johnson/20621
-Andreas,Lorgen,Sophomore,Computer Science/Data Science,/sports/mens-rowing/roster/andreas-lorgen/20622
-Sebastian,Marsoner,Sophomore,undeclared,/sports/mens-rowing/roster/sebastian-marsoner/20623
-Jacopo,Mascitelli,Senior,Computer Science,/sports/mens-rowing/roster/jacopo-mascitelli/20624
-Logan,Morley,Junior,Cellular and Molecular Biology,/sports/mens-rowing/roster/logan-morley/20625
-Joey,O'Brien,Senior,Computer Science,/sports/mens-rowing/roster/joey-o-brien/20626
-James,Pullinger,Sophomore,Civil and Environmental Engineering,/sports/mens-rowing/roster/james-pullinger/20627
-Jacob ,Rivera,Sophomore,undeclared,/sports/mens-rowing/roster/jacob-rivera/20928
-John,Salvi,Freshman,undeclared,/sports/mens-rowing/roster/john-salvi/20717
-Sandro,Scalfi,Freshman,undeclared,/sports/mens-rowing/roster/sandro-scalfi/20718
-Arthur,Scott,Freshman,undeclared,/sports/mens-rowing/roster/arthur-scott/20719
-Travis,Senf,Senior,Computer Science,/sports/mens-rowing/roster/travis-senf/20628
-Luke,Smith,Freshman,undeclared,/sports/mens-rowing/roster/luke-smith/20720
-Noah,Tan,Junior,International Relations,/sports/mens-rowing/roster/noah-tan/20630
-Tibor,Thompson,Senior,Computer Science,/sports/mens-rowing/roster/tibor-thompson/20631
-Lauren,Williams,Sophomore,undeclared,/sports/mens-rowing/roster/lauren-williams/20634
-Nick,Woehrle,Senior,Mechanical Engineering,/sports/mens-rowing/roster/nick-woehrle/20635
+First Name,Last Name,Class,Major,Major (Abbreviated),URL
+Kannan,Alford,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/kannan-alford/20711
+Schuyler,Audley-Williams,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/schuyler-audley-williams/20712
+Kyle,Bergstedt,Senior,Chemical Engineering,CHEMENG,/sports/mens-rowing/roster/kyle-bergstedt/20671
+Callen,Berwick,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/callen-berwick/20713
+Fleur,Blase,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/fleur-blase/20714
+Tom,Corbett,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/tom-corbett/20715
+Ben,Felter,Senior,Computer Science,CS,/sports/mens-rowing/roster/ben-felter/20616
+James,Fetter,Junior,Computer Science,CS,/sports/mens-rowing/roster/james-fetter/20618
+Wilder,Fulford,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/wilder-fulford/20929
+Caspar,Griffin,Sophomore,undeclared,Undeclared,/sports/mens-rowing/roster/caspar-griffin/20619
+Jack,Griffin,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/jack-griffin/20930
+Joseph,Guman,Senior,Computer Science,CS,/sports/mens-rowing/roster/joseph-guman/20620
+Hylton,Harvey,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/hylton-harvey/20716
+Lucas,Johnson,Sophomore,undeclared,Undeclared,/sports/mens-rowing/roster/lucas-johnson/20621
+Andreas,Lorgen,Sophomore,Computer Science/Data Science,,/sports/mens-rowing/roster/andreas-lorgen/20622
+Sebastian,Marsoner,Sophomore,undeclared,Undeclared,/sports/mens-rowing/roster/sebastian-marsoner/20623
+Jacopo,Mascitelli,Senior,Computer Science,CS,/sports/mens-rowing/roster/jacopo-mascitelli/20624
+Logan,Morley,Junior,Cellular and Molecular Biology,,/sports/mens-rowing/roster/logan-morley/20625
+Joey,O'Brien,Senior,Computer Science,CS,/sports/mens-rowing/roster/joey-o-brien/20626
+James,Pullinger,Sophomore,Civil and Environmental Engineering,CEE,/sports/mens-rowing/roster/james-pullinger/20627
+Jacob ,Rivera,Sophomore,undeclared,Undeclared,/sports/mens-rowing/roster/jacob-rivera/20928
+John,Salvi,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/john-salvi/20717
+Sandro,Scalfi,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/sandro-scalfi/20718
+Arthur,Scott,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/arthur-scott/20719
+Travis,Senf,Senior,Computer Science,CS,/sports/mens-rowing/roster/travis-senf/20628
+Luke,Smith,Freshman,undeclared,Undeclared,/sports/mens-rowing/roster/luke-smith/20720
+Noah,Tan,Junior,International Relations,INTNLREL,/sports/mens-rowing/roster/noah-tan/20630
+Tibor,Thompson,Senior,Computer Science,CS,/sports/mens-rowing/roster/tibor-thompson/20631
+Lauren,Williams,Sophomore,undeclared,Undeclared,/sports/mens-rowing/roster/lauren-williams/20634
+Nick,Woehrle,Senior,Mechanical Engineering,ME,/sports/mens-rowing/roster/nick-woehrle/20635
