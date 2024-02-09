@@ -1,28 +1,28 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Liam,Custer,Sophomore,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/liam-custer/20850
-Ethan,Dang,Senior,Economics,ECON,/sports/mens-swimming-and-diving/roster/ethan-dang/20851
-Andres,Dupont,Sophomore,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/andres-dupont/20852
-Zhier,Fan,Sophomore,Undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/zhier-fan/20958
-Matt,Fenlon,Junior,Economics,ECON,/sports/mens-swimming-and-diving/roster/matt-fenlon/20853
-Preston,Forst,Senior,Management Science & Engineering,MS&E,/sports/mens-swimming-and-diving/roster/preston-forst/20854
-Rafael,Gu,Sophomore,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/rafael-gu/20855
-Ethan,Harrington,Freshman,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/ethan-harrington/20869
-Hunter,Hollenbeck,Senior,Electrical Engineering,EE,/sports/mens-swimming-and-diving/roster/hunter-hollenbeck/20856
-Gibson,Holmes,Freshman,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/gibson-holmes/20870
-Ethan,Hu,Senior,Computer Science,CS,/sports/mens-swimming-and-diving/roster/ethan-hu/20857
-Hayden,Kwan,Sophomore,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/hayden-kwan/20858
-Gabe,Machado,Junior,Earth Systems,EARTHSYS,/sports/mens-swimming-and-diving/roster/gabe-machado/20859
-Andrew,Matejka,Graduate Student,History/Economics,ECON,/sports/mens-swimming-and-diving/roster/andrew-matejka/20860
-Luke,Maurer,Senior,Economics,ECON,/sports/mens-swimming-and-diving/roster/luke-maurer/20861
-Rex,Maurer,Freshman,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/rex-maurer/20871
-Henry,McFadden,Freshman,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/henry-mcfadden/20872
-Rick,Mihm,Senior,Economics,ECON,/sports/mens-swimming-and-diving/roster/rick-mihm/20862
-Andrei,Minakov,Junior,"Science, Technology & Society",STS,/sports/mens-swimming-and-diving/roster/andrei-minakov/20960
-Henry,Morrissey,Sophomore,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/henry-morrissey/20863
-Ron,Polonsky,Junior,Computer Science,CS,/sports/mens-swimming-and-diving/roster/ron-polonsky/20959
-Jack,Ryan,Junior,Symbolic Systems,SYMSYS,/sports/mens-swimming-and-diving/roster/jack-ryan/20864
-Aaron,Sequeira,Junior,Computer Science/Management Science and Engineering,,/sports/mens-swimming-and-diving/roster/aaron-sequeira/20865
-Jonathan,Tan,Freshman,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/jonathan-tan/20873
-Avery,Voss,Junior,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/avery-voss/20866
-Hayden,Zheng,Junior,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/hayden-zheng/20867
-Josh,Zuchowski,Sophomore,undeclared,Undeclared,/sports/mens-swimming-and-diving/roster/josh-zuchowski/20868
+Full Name,Ht.,Wt.,Major,Major (Abbreviated),Hometown / High School,Pos.,Class
+Liam Custer,-,,undeclared,Undeclared,"Sarasota, Fla. / Pine View",Free/IM,So.
+Ethan Dang,5-10,160,Economics,ECON,"Renton, Wash. / Hazen",Breast,Sr.
+Andres Dupont,-,,undeclared,Undeclared,"Cancun, Mexico / The Bolles School",Free,So.
+Zhier Fan,-,,Undeclared,Undeclared,"Plano, Texas / Plano Senior",Breast/IM,So.
+Matt Fenlon,6-1,185,Economics,ECON,"Chappaqua, N.Y. / Horace Greeley",Free/Fly/IM,Jr.
+Preston Forst,6-3,205,Management Science & Engineering,MS&E,"Summerfield, N.C. / Northern Guilford",Fly/Free,Sr.
+Rafael Gu,-,,undeclared,Undeclared,"Shanghai, China / Shanghai American School",Free/Fly,So.
+Ethan Harrington,-,,undeclared,Undeclared,"Palo Alto, Calif. / Palo Alto",Fly/Free,Fr.
+Hunter Hollenbeck,5-11,185,Electrical Engineering,EE,"Okemos, Mich. / Okemos",Dive,Sr.
+Gibson Holmes,-,,undeclared,Undeclared,"Cincinnati, Ohio / Indian Hills",Fly/Free/IM,Fr.
+Ethan Hu,6-0,178,Computer Science,CS,"Cupertino, Calif. / Harker School",Fly/IM,Sr.
+Hayden Kwan,-,,undeclared,Undeclared,"Tallahassee, Fla. / Lawton Chiles",Back,So.
+Gabe Machado,6-7,190,Earth Systems,EARTHSYS,"Boise, Idaho / Bishop Kelly",Free/Back,Jr.
+Andrew Matejka,6-7,215,History/Economics,ECON,"Wellesley Hills, Mass. / Wellesley",Free,Gr.
+Luke Maurer,6-7,215,Economics,ECON,"Wilmette, Ill. / Loyola Academy",Free,Sr.
+Rex Maurer,-,,undeclared,Undeclared,"Pasadena, Calif. / Loyola",Free/Back,Fr.
+Henry McFadden,-,,undeclared,Undeclared,"Haddonfield, N.J. / Haddonfield Regional",Free/Fly,Fr.
+Rick Mihm,6-0,170,Economics,ECON,"Wexford, Pa. / North Allegheny",Free/IM,Sr.
+Andrei Minakov,-,,"Science, Technology & Society",STS,"Saint Petersburg, Russia / College of Olympic Reserve No. 1",Fly/Free,Jr.
+Henry Morrissey,-,,undeclared,Undeclared,"Philadelphia, Pa. / Germantown Academy",Free,So.
+Ron Polonsky,-,,Computer Science,CS,"Haifa, Israel / Ironi Hey Haifa",Breast/IM,Jr.
+Jack Ryan,5-10,150,Symbolic Systems,SYMSYS,"Denver, Colo. / Denver South",Diving,Jr.
+Aaron Sequeira,6-1,160,Computer Science/Management Science and Engineering,,"Cincinnati, Ohio / Walnut Hills",Back,Jr.
+Jonathan Tan,-,,undeclared,Undeclared,"Singapore, Singapore / Anglo-Chinese School",Free/Fly,Fr.
+Avery Voss,6-4,195,undeclared,Undeclared,"Upper Arlington, Ohio / Upper Arlington",Free,Jr.
+Hayden Zheng,6-1,185,undeclared,Undeclared,"St. Louis Park, Minn. / St.  Louis Park",Back/Breast/IM,Jr.
+Josh Zuchowski,-,,undeclared,Undeclared,"Jupiter, Fla. / The King's Academy",Back/IM,So.

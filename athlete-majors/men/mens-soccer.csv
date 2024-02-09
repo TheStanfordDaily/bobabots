@@ -1,30 +1,30 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Noah,Adnan,Senior,Management Science & Engineering,MS&E,/sports/mens-soccer/roster/noah-adnan/20146
-Conner,Maurer,Senior,Economics,ECON,/sports/mens-soccer/roster/conner-maurer/20161
-Nolan,Evers,Redshirt Senior,"GR: Community Health and Prevention Research, UG: Human Biology",,/sports/mens-soccer/roster/nolan-evers/20155
-Mark,Fisher,Redshirt Senior,Bioengineering,BIOE,/sports/mens-soccer/roster/mark-fisher/20156
-Fletcher,Bank,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/fletcher-bank/20147
-Will,Reilly,Junior,Symbolic Systems,SYMSYS,/sports/mens-soccer/roster/will-reilly/20165
-Jackson,Kiil,Redshirt Sophomore,"Science, Technology & Society",STS,/sports/mens-soccer/roster/jackson-kiil/20159
-Zach,Bohane,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/zach-bohane/20149
-Alfonso,Tenconi-Gradillas,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/alfonso-tenconi-gradillas/20168
-Shane,de Flores,Redshirt Sophomore,"Science, Technology & Society",STS,/sports/mens-soccer/roster/shane-de-flores/20151
-Liam,Doyle,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/liam-doyle/20152
-Will,Cleary,Sophomore,Undeclared,Undeclared,/sports/mens-soccer/roster/will-cleary/20150
-Layton,Purchase,Senior,Economics,ECON,/sports/mens-soccer/roster/layton-purchase/20164
-Connor,Evans,Redshirt Junior,Management Science & Engineering,MS&E,/sports/mens-soccer/roster/connor-evans/20154
-Aiden,Weaver,Senior,Bioengineering,BIOE,/sports/mens-soccer/roster/aiden-weaver/20169
-Duncan,Jarvie,Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/duncan-jarvie/20170
-Louis,Weisdorf,Junior,Psychology,PSYCH,/sports/mens-soccer/roster/louis-weisdorf/20171
-Ryan,Dunn,Senior,Computer Science,CS,/sports/mens-soccer/roster/ryan-dunn/20153
-Nico Rei,McMillan,Redshirt Sophomore,Economics,ECON,/sports/mens-soccer/roster/nico-rei-mcmillan/20162
-Kwabena,Kwakwa,Redshirt Sophomore,Political Science,POLISCI,/sports/mens-soccer/roster/kwabena-kwakwa/20160
-Rafael,Pfauser,Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/rafael-pfauser/20172
-Dylan,Hooper,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/dylan-hooper/20157
-Dylan,Groeneveld,Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/dylan-groeneveld/20173
-Palmer,Bank,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/palmer-bank/20148
-Takashi,Sasaki,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/takashi-sasaki/20166
-Eliot,Jones,Senior,"GR: Computer Science, UG: Mathematical and Computational Science",,/sports/mens-soccer/roster/eliot-jones/20158
-Rowan,Schnebly,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-soccer/roster/rowan-schnebly/20167
-Jack,Morris,Redshirt Sophomore,Computer Science,CS,/sports/mens-soccer/roster/jack-morris/20163
-James,Swomley,Graduate Student,Computational and Mathematical Engineering,CME,/sports/mens-soccer/roster/james-swomley/20174
+#,Full Name,Pos.,Ht.,Wt.,Hometown / High School,Major,Major (Abbreviated),Academic Year
+2,Noah Adnan,Defender,6-2,180,"Gaithersburg, Md. / Quince Orchard",Management Science & Engineering,MS&E,Sr.
+4,Conner Maurer,Defender,6-1,168,"Levittown, N.Y. / General Douglas MacArthur",Economics,ECON,Sr.
+5,Nolan Evers,Defender,6-2,175,"Pasadena, Calif. / Marshall Fundamental","GR: Community Health and Prevention Research, UG: Human Biology",,R-Sr.
+6,Mark Fisher,Midfielder,5-11,165,"Grand Blanc, Mich. / Grand Blanc",Bioengineering,BIOE,R-Sr.
+7,Fletcher Bank,Midfielder,5-10,165,"Bakersfield, Calif. / Garces Memorial",Undeclared,Undeclared,So.
+8,Will Reilly,Midfielder,5-10,160,"Decatur, Ga. / The Paideia School",Symbolic Systems,SYMSYS,Jr.
+9,Jackson Kiil,Forward,6-2,170,"San Diego, Calif. / Cathedral Catholic","Science, Technology & Society",STS,R-So.
+10,Zach Bohane,Midfielder,5-10,150,"Monte Sereno, Calif. / Los Gatos High School",Undeclared,Undeclared,So.
+11,Alfonso Tenconi-Gradillas,Forward,6-0,165,"Virginia Water, England / Eton College",Undeclared,Undeclared,R-Fr.
+13,Shane de Flores,Midfielder,5-10,155,"Danville, Calif. / San Ramon Valley","Science, Technology & Society",STS,R-So.
+14,Liam Doyle,Forward,5-11,165,"Tokyo, Japan / Northwood School",Undeclared,Undeclared,So.
+15,Will Cleary,Midfielder,6-2,175,"Windsor, Conn. / Loomis Chaffee School",Undeclared,Undeclared,So.
+16,Layton Purchase,Midfielder,6-1,180,"Denver, Colo. / Kent Denver School",Economics,ECON,Sr.
+17,Connor Evans,Midfielder,5-9,155,"Portland, Ore. / Central Catholic",Management Science & Engineering,MS&E,R-Jr.
+18,Aiden Weaver,Midfielder,5-7,140,"Elizabethtown, Pa. / Elizabethtown Area",Bioengineering,BIOE,Sr.
+19,Duncan Jarvie,Forward,6-2,180,"Lehi, Utah / Cherry Creek Elevation",Undeclared,Undeclared,Fr.
+20,Louis Weisdorf,Defender,6-0,170,"Copenhagen, Denmark / Gammel Hellerup Gymnasium",Psychology,PSYCH,Jr.
+21,Ryan Dunn,Defender,5-11,172,"Huntersville, N.C. / Cox Mill",Computer Science,CS,Sr.
+22,Nico Rei McMillan,Defender,5-10,165,"Seattle, Wash. / Renton",Economics,ECON,R-So.
+23,Kwabena Kwakwa,Midfielder,5-8,157,"Accra, Ghana / Middlesex School",Political Science,POLISCI,R-So.
+24,Rafael Pfauser,Defender,6-3,175,"Munich, Germany / Privatgymnasium Dr. Florian Überreiter",Undeclared,Undeclared,Fr.
+25,Dylan Hooper,Defender,6-1,185,"Shawnee, Kan. / Mill Valley",Undeclared,Undeclared,R-Fr.
+27,Dylan Groeneveld,Defender,6-1,175,"Coronado, Calif. / Coronado",Undeclared,Undeclared,Fr.
+28,Palmer Bank,Defender,6-0,185,"Bakersfield, Calif. / Garces Memorial",Undeclared,Undeclared,R-Fr.
+29,Takashi Sasaki,Defender,5-9,150,"Issaquah, Wash. / Issaquah",Undeclared,Undeclared,R-Fr.
+30,Eliot Jones,Goalkeeper,6-2,175,"New Britain, Conn. / K12 International Academy","GR: Computer Science, UG: Mathematical and Computational Science",,Sr.
+31,Rowan Schnebly,Goalkeeper,6-1,175,"Portland, Ore. / Lincoln",Undeclared,Undeclared,R-Fr.
+32,Jack Morris,Goalkeeper,6-3,210,"Eau Claire, Wis. / Wisconsin Connections Academy",Computer Science,CS,R-So.
+33,James Swomley,Goalkeeper,6-6,195,"Newton, Mass. / Newton North",Computational and Mathematical Engineering,CME,Gr.

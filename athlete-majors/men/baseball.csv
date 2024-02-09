@@ -1,35 +1,37 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Owen,Cobb,Graduate Student,Management Science & Engineering / MS&E (MS),,/sports/baseball/roster/owen-cobb/20546
-Temo,Becerra,Junior,"Science, Technology & Society",STS,/sports/baseball/roster/temo-becerra/20542
-Saborn,Campbell,Junior,Management Science & Engineering,MS&E,/sports/baseball/roster/saborn-campbell/20545
-Trevor,Haskins,Junior,Management Science & Engineering,MS&E,/sports/baseball/roster/trevor-haskins/20550
-Jimmy,Nati,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/jimmy-nati/20558
-Malcolm,Moore,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/malcolm-moore/20556
-Luke,Lavin,Freshman,Undeclared,Undeclared,/sports/baseball/roster/luke-lavin/20677
-Toran,O'Harran,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/toran-o-harran/20559
-Ethan,Hott,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/ethan-hott/20552
-Sebastian,David,Freshman,Undeclared,Undeclared,/sports/baseball/roster/sebastian-david/20672
-Champ,Hampton,Freshman,Undeclared,Undeclared,/sports/baseball/roster/champ-hampton/20674
-Brandon,Larson,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/brandon-larson/20676
-Kassius,Thomas,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/kassius-thomas/20683
-Joey,Volchko,Freshman,Undeclared,Undeclared,/sports/baseball/roster/joey-volchko/20684
-Nathan,Fleischli,Graduate Student,Computer Science / CS (MS),,/sports/baseball/roster/nathan-fleischli/20548
-Charlie,Saum,Junior,"Science, Technology & Society",STS,/sports/baseball/roster/charlie-saum/20562
-Cort,MacDonald,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/cort-macdonald/20554
-Jaden,Bruno,Senior,Management Science & Engineering,MS&E,/sports/baseball/roster/jaden-bruno/20544
-Aidan,Keenan,Freshman,Undeclared,Undeclared,/sports/baseball/roster/aidan-keenan/20675
-Nick,Dugan,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/nick-dugan/20547
-Sam,Garewal,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/sam-garewal/20673
-Brady,Reynolds,Freshman,Undeclared,Undeclared,/sports/baseball/roster/brady-reynolds/20680
-Matt,Scott,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/matt-scott/20563
-Ryan,Speshyock,Freshman,Undeclared,Undeclared,/sports/baseball/roster/ryan-speshyock/20681
-Gabe,Springer,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/gabe-springer/20564
-Trevor,Moore,Sophomore,Undeclared,Undeclared,/sports/baseball/roster/trevor-moore/20557
-Ty,Uber,Junior,"Science, Technology & Society",STS,/sports/baseball/roster/ty-uber/20566
-Tommy,O'Rourke,Senior,"Science, Technology & Society",STS,/sports/baseball/roster/tommy-o-rourke/20560
-Jack,Svinth,Freshman,Undeclared,Undeclared,/sports/baseball/roster/jack-svinth/20682
-Jake,Sapien,Junior,"Science, Technology & Society",STS,/sports/baseball/roster/jake-sapien/20561
-Ben,Reimers,Freshman,Undeclared,Undeclared,/sports/baseball/roster/ben-reimers/20679
-Christian,Lim,Freshman,Undeclared,Undeclared,/sports/baseball/roster/christian-lim/20678
-Brett,Blair,Junior,Management Science & Engineering,MS&E,/sports/baseball/roster/brett-blair/20543
-Gavin,Nalu,Junior,Public Policy,PUBLPOL,/sports/baseball/roster/gavin-nalu/20752
+#,Full Name,Pos.,Ht.,Wt.,Year,B/T,Hometown / High School,Major,Major (Abbreviated)
+1,Owen Cobb,INF/OF,6-3,197,Sr.,R/R,"Seattle, Wash. / Seattle Academy",Management Science & Engineering / MS&E (MS),
+2,Drew Bowser,INF,6-4,226,Jr.,R/R,"Los Angeles, Calif. / Harvard-Westlake","Science, Technology & Society",STS
+4,Saborn Campbell,OF,5-11,202,So.,R/R,"Bloomfield Hills, Mich. / Detroit Country Day",Management Science & Engineering,MS&E
+5,Trevor Haskins,INF,6-0,180,So.,R/R,"San Jose, Calif. / Valley Christian",Management Science & Engineering,MS&E
+6,Braden Montgomery,OF/RHP,6-2,217,So.,S/R,"Madison, Miss. / Madison Central",Undeclared,Undeclared
+10,Malcolm Moore,C/1B,6-1,215,Fr.,L/R,"Sacramento, Calif. / C.K. McClatchy",Undeclared,Undeclared
+11,Alberto Rios,C,6-0,203,Jr.,R/R,"Bellflower, Calif. / St. John Bosco",Management Science & Engineering,MS&E
+12,Tommy Troy,INF/OF,5-10,197,Jr.,R/R,"Los Gatos, Calif. / Los Gatos","Science, Technology & Society",STS
+13,Ethan Hott,OF,5-10,183,Fr.,R/R,"Paradise Valley, Ariz. / Chaparral",Undeclared,Undeclared
+14,Cort MacDonald,OF,6-0,188,Fr.,L/L,"Arlington, Texas / Pantego Christian Academy",Undeclared,Undeclared
+15,Jimmy Nati,INF,6-0,207,Fr.,R/R,"Sydney, Australia / Oakhill College",Undeclared,Undeclared
+18,Toran O'Harran,RHP,6-0,187,Fr.,R/R,"Rocklin, Calif. / Rocklin",Undeclared,Undeclared
+19,Henry Gargus,1B/OF,6-0,212,Sr.,L/L,"Yakima, Wash. / Davis","Science, Technology & Society",STS
+20,Nathan Fleischli,RHP,6-4,205,Sr.,R/R,"Atherton, Calif. / Sacred Heart Prep",Computer Science / CS (MS),
+21,Charlie Saum,C,6-0,200,So.,R/R,"Thousand Oaks, Calif. / Thousand Oaks","Science, Technology & Society",STS
+22,Eddie Park,OF,6-1,192,Jr.,L/L,"San Jose, Calif. / Valley Christian",Management Science & Engineering,MS&E
+23,Joey Dixon,RHP,6-2,204,Jr.,R/R,"South Jordan, Utah / Bingham","Science, Technology & Society",STS
+25,Nick Dugan,RHP,6-0,198,Fr.,R/R,"Eureka, Calif. / St. Bernard’s Academy",Undeclared,Undeclared
+26,Quinn Mathews,LHP,6-5,188,Sr.,L/L,"Aliso Viejo, Calif. / Aliso Niguel","Science, Technology & Society",STS
+27,Temo Becerra,INF,6-0,181,So.,R/R,"Clovis, Calif. / Buchanan","Science, Technology & Society",STS
+28,Matt Scott,RHP,6-7,231,Fr.,R/R,"Redding, Conn. / Joel Barlow",Undeclared,Undeclared
+29,Cole Hinkelman,OF,6-5,219,Sr.,L/R,"Sammamish, Wash. / Skyline","Science, Technology & Society",STS
+30,Brandt Pancer,RHP,6-0,197,Jr.,R/R,"Suwanee, Ga. / North Gwinett",Management Science & Engineering,MS&E
+31,Carter Graham,1B,6-2,232,Jr.,R/R,"Los Angeles, Calif. / Chaminade College Prep","Science, Technology & Society",STS
+33,Gabe Springer,INF,6-0,187,Fr.,S/R,"Boulder, Colo. / Fairview",Undeclared,Undeclared
+34,Ryan Bruno,LHP,6-3,221,Jr.,L/L,"Wellington, Fla. / American Heritage School",Communication,COMM
+36,Ty Uber,RHP,6-4,243,So.,R/R,"Cameron Park, Calif. / Ponderosa","Science, Technology & Society",STS
+37,Tommy O'Rourke,RHP,6-3,210,Jr.,R/R,"Morristown, N.J. / Seton Hall Prep","Science, Technology & Society",STS
+38,Trevor Moore,RHP,6-1,213,Fr.,R/R,"Golden, Colo. / Mullen",Undeclared,Undeclared
+39,Jake Sapien,RHP/1B,6-2,223,So.,R/R,"Atwater, Calif. / Buhach Colony","Science, Technology & Society",STS
+40,Nicolas Lopez,LHP,6-4,217,Gr.,R/L,"Redwood City, Calif. / Junipero Serra",Human Biology,HUMBIO
+41,Matt Swartz,LHP,6-4,235,R-Jr.,L/L,"Huntington Beach, Calif. / Edison",Economics,ECON
+44,Brett Blair,OF/C,6-0,216,So.,R/R,"Gainesville, Fla. / Buchholz",Management Science & Engineering,MS&E
+45,Max Meier,RHP,6-2,216,Sr.,L/R,"Belmont, Mass. / Lawrence Academy","Science, Technology & Society",STS
+46,Jaden Bruno,RHP,6-3,215,R-So.,R/R,"Wellington, Fla. / American Heritage School",Management Science & Engineering,MS&E
+49,Drew Dowd,LHP,6-2,206,Jr.,L/L,"Belmont, Calif. / Junipero Serra","Science, Technology & Society",STS

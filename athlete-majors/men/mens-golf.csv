@@ -1,10 +1,10 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Kush,Arora,Freshman,Undeclared,Undeclared,/sports/mens-golf/roster/kush-arora/20450
-Jake,Beber-Frankel,Senior,Undeclared,Undeclared,/sports/mens-golf/roster/jake-beber-frankel/20442
-Barclay,Brown,Graduate Student,Economics,ECON,/sports/mens-golf/roster/barclay-brown/20443
-Sean-Karl,Dobson,Sophomore,Undeclared,Undeclared,/sports/mens-golf/roster/sean-karl-dobson/20444
-Ethan,Gao,Freshman,Undeclared,Undeclared,/sports/mens-golf/roster/ethan-gao/20451
-Dean,Greyserman,Sophomore,Undeclared,Undeclared,/sports/mens-golf/roster/dean-greyserman/20445
-Anton,Ouyang,Sophomore,Undeclared,Undeclared,/sports/mens-golf/roster/anton-ouyang/20446
-Michael,Thorbjornsen,Senior,Communication,COMM,/sports/mens-golf/roster/michael-thorbjornsen/20447
-Karl,Vilips,Senior,Communication,COMM,/sports/mens-golf/roster/karl-vilips/20448
+#,Full Name,Ht.,Wt.,Hometown / High School,Major,Major (Abbreviated),Academic Year
+,Kush Arora,-,,"Pleasanton, Calif. / Amador Valley",Undeclared,Undeclared,Fr.
+,Jake Beber-Frankel,-,,"Miami, Fla. / Ransom-Everglades",Undeclared,Undeclared,Sr.
+,Barclay Brown,-,,"South Yorkshire, England / Birkdale School",Economics,ECON,Gr.
+,Sean-Karl Dobson,-,,"Austin, Texas / Westlake",Undeclared,Undeclared,So.
+,Ethan Gao,-,,"Alpharetta, Ga. / Laurel Springs School",Undeclared,Undeclared,Fr.
+,Dean Greyserman,-,,"Boca Raton, Fla. / Score Academy",Undeclared,Undeclared,So.
+,Anton Ouyang,-,,"San Jose, Calif. / Lynbrook",Undeclared,Undeclared,So.
+,Michael Thorbjornsen,-,,"Wellesley, Mass. / Wellesley",Communication,COMM,Sr.
+,Karl Vilips,-,,"Perth, Western Australia / Saddlebrook Prep [Fla.]",Communication,COMM,Sr.

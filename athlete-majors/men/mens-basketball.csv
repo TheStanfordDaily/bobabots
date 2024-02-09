@@ -1,17 +1,17 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Jared,Bynum,Graduate Student,"Policy, Organization and Leadership Studies",,/sports/mens-basketball/roster/jared-bynum/20087
-Andrej,Stojakovic,Freshman,Undeclared,Undeclared,/sports/mens-basketball/roster/andrej-stojakovic/20088
-Kanaan,Carlyle,Freshman,Undeclared,Undeclared,/sports/mens-basketball/roster/kanaan-carlyle/20089
-Roy,Yuan,Graduate Student,Computer Science,CS,/sports/mens-basketball/roster/roy-yuan/20086
-Max,Murrell,Senior,Computer Science,CS,/sports/mens-basketball/roster/max-murrell/20083
-Ryan,Agarwal,Sophomore,Undeclared,Undeclared,/sports/mens-basketball/roster/ryan-agarwal/20076
-Michael,Jones,Graduate Student,MS Statistics,STATS,/sports/mens-basketball/roster/michael-jones/20080
-Spencer,Jones,Fifth Year,Management Science & Engineering,MS&E,/sports/mens-basketball/roster/spencer-jones/20081
-Benny,Gealer,Sophomore,Undeclared,Undeclared,/sports/mens-basketball/roster/benny-gealer/20078
-Cameron,Grant,Freshman,Undeclared,Undeclared,/sports/mens-basketball/roster/cameron-grant/20091
-James,Keefe,Graduate Student,MA Public Policy,PUBLPOL,/sports/mens-basketball/roster/james-keefe/20082
-Brandon,Angel,Senior,Economics,ECON,/sports/mens-basketball/roster/brandon-angel/20077
-Jaylen,Thompson,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-basketball/roster/jaylen-thompson/20085
-Josue,Gil-Silva,Graduate Student,Mechanical Engineering,ME,/sports/mens-basketball/roster/josue-gil-silva/20079
-Maxime,Raynaud,Junior,Mathematics,MATH,/sports/mens-basketball/roster/maxime-raynaud/20084
-Aidan,Cammann,Freshman,Undeclared,Undeclared,/sports/mens-basketball/roster/aidan-cammann/20090
+#,Full Name,Ht.,Wt.,Hometown / High School,Major,Major (Abbreviated),Academic Year,Pos.
+1,Jared Bynum,5-10,185,"Largo, Md. / Georgetown Prep / Providence","Policy, Organization and Leadership Studies",,Gr.,Guard
+2,Andrej Stojakovic,6-7,190,"Carmichael, Calif. / Jesuit",Undeclared,Undeclared,Fr.,Guard
+3,Kanaan Carlyle,6-3,185,"Atlanta, Ga. / Overtime Elite",Undeclared,Undeclared,Fr.,Guard
+4,Roy Yuan,6-1,170,"San Jose, Calif. / Saint Francis",Computer Science,CS,Gr.,Guard
+10,Max Murrell,6-9,225,"Omaha, Neb. / Millard North",Computer Science,CS,Sr.,Forward
+11,Ryan Agarwal,6-6,190,"Coppell, Texas / Coppell",Undeclared,Undeclared,So.,Guard
+13,Michael Jones,6-5,205,"Woodbury, Minn. / Woodbury / Davidson",MS Statistics,STATS,Gr.,Guard
+14,Spencer Jones,6-7,225,"Roeland Park, Kan. / Bishop Miege",Management Science & Engineering,MS&E,5th,Forward
+15,Benny Gealer,6-1,175,"Palos Verdes Estates, Calif. / Rolling Hills Prep",Undeclared,Undeclared,So.,Guard
+20,Cameron Grant,6-7,185,"Lakewood, Ohio / St. Edward",Undeclared,Undeclared,Fr.,Forward
+22,James Keefe,6-9,240,"Los Angeles, Calif. / Loyola",MA Public Policy,PUBLPOL,Gr.,Forward
+23,Brandon Angel,6-8,240,"San Diego, Calif. / Torrey Pines",Economics,ECON,Sr.,Forward
+24,Jaylen Thompson,6-8,195,"Oakland, Calif. / Southern California Academy",Undeclared,Undeclared,R-Fr.,Forward
+25,Josue Gil-Silva,6-1,185,"Salinas, Calif. / Alisal",Mechanical Engineering,ME,Gr.,Guard
+42,Maxime Raynaud,7-1,250,"Paris, France / Lycee Henri IV",Mathematics,MATH,Jr.,Forward
+52,Aidan Cammann,6-10,220,"Andover, Mass. / Brewster Academy (N.H.)",Undeclared,Undeclared,Fr.,Forward

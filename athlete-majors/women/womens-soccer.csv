@@ -1,22 +1,31 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Alyssa,Savig,Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/alyssa-savig/20978
-Elise,Evans,Junior,Undeclared,Undeclared,/sports/womens-soccer/roster/elise-evans/20967
-Allie,Montoya,Junior,Undeclared,Undeclared,/sports/womens-soccer/roster/allie-montoya/20975
-Freya,Spiekerkoetter,Redshirt Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/freya-spiekerkoetter/20980
-Shae,Harvey,Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/shae-harvey/20971
-Mia,Bhuta,Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/mia-bhuta/20964
-Jasmine,Aikey,Junior,Undeclared,Undeclared,/sports/womens-soccer/roster/jasmine-aikey/20963
-Erica,Grilione,Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/erica-grilione/20968
-Avani,Brandt,Senior,"Science, Technology & Society",STS,/sports/womens-soccer/roster/avani-brandt/20965
-Andrea,Kitahata,Redshirt Junior,Symbolic Systems,SYMSYS,/sports/womens-soccer/roster/andrea-kitahata/20973
-Joelle,Jung,Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/joelle-jung/20972
-Nya,Harrison,Senior,Bioengineering,BIOE,/sports/womens-soccer/roster/nya-harrison/20970
-Maryn,Wolf,Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/maryn-wolf/20982
-Samantha,Williams,Graduate Student,"Science, Technology & Society",STS,/sports/womens-soccer/roster/samantha-williams/20981
-Esha,Gupta,Redshirt Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/esha-gupta/20969
-Kellie,Pagador,Senior,Psychology,PSYCH,/sports/womens-soccer/roster/kellie-pagador/20976
-Logan,Smith,Junior,Undeclared,Undeclared,/sports/womens-soccer/roster/logan-smith/20979
-Haley,Craig,Senior,"Science, Technology & Society",STS,/sports/womens-soccer/roster/haley-craig/20966
-Amalie,Pianim,Redshirt Sophomore,Undeclared,Undeclared,/sports/womens-soccer/roster/amalie-pianim/20977
-Aki,Yuasa,Junior,Undeclared,Undeclared,/sports/womens-soccer/roster/aki-yuasa/20983
-Lumi,Kostmayer,Junior,Undeclared,Undeclared,/sports/womens-soccer/roster/lumi-kostmayer/20974
+#,Full Name,Position,Height,Year,Hometown / High School,Major,Major (Abbreviated)
+0,Alyssa Savig,Goalkeeper,5-11,Fr.,"Granite Bay, Calif. / Granite Bay",Undeclared,Undeclared
+1,Ryan Campbell,Goalkeeper,5-11,Sr.,"Laguna Beach, Calif. / JSerra",Communication,COMM
+2,Elise Evans,Defender,5-7,So.,"Redwood City, Calif. / Woodside",Undeclared,Undeclared
+3,Allie Montoya,Forward,5-3,So.,"Los Altos, Calif. / Mountain View",Undeclared,Undeclared
+4,Freya Spiekerkoetter,Defender,5-8,R-Fr.,"Redwood City, Calif. / Silicon Valley International School",Undeclared,Undeclared
+5,Shae Harvey,Midfielder,5-10,Fr.,"Hermosa Beach, Calif. / Mira Costa",Undeclared,Undeclared
+6,Katie Duong,Midfielder,5-4,5th,"Portland, Ore. / Jesuit Portland",Biomechanical Engineering,ME
+8,Mia Bhuta,Midfielder,5-5,Fr.,"Pittsburgh, Pa. / Mount Lebanon",Undeclared,Undeclared
+9,Astrid Wheeler,Midfielder,5-5,Sr.,"Atlanta, Ga. / Laurel Springs School",Communication,COMM
+10,Maya Doms,Midfielder,5-6,5th,"Davis, Calif. / Davis Senior",Human Biology,HUMBIO
+11,Catherine Paulson,Midfielder/Forward,5-7,R-Jr.,"Los Altos, Calif. / Saint Francis","Science, Technology & Society",STS
+12,Jasmine Aikey,Midfielder,5-10,So.,"Palo Alto, Calif. / Bryant Academy",Undeclared,Undeclared
+13,Mia Watanabe,Forward,5-7,Sr.,"Kaneohe, Hawai'i / 'Iolani School",Management Science & Engineering / MS&E (MS),
+14,Julia Leontini,Midfielder,5-7,Sr.,"Danville, Calif. / Monte Vista",Human Biology,HUMBIO
+15,Kennedy Wesley,Defender,5-5,Gr.,"Rossmoor, Calif. / Valley Christian",Psychology / Sociology (MA),
+16,Sarah Paulson,Defender,5-7,R-Jr.,"Los Altos, Calif. / Saint Francis",Human Biology,HUMBIO
+17,Erica Grilione,Forward,5-4,Fr.,"Roseville, Calif. / West Park",Undeclared,Undeclared
+18,Avani Brandt,Defender,5-6,Jr.,"Syosset, N.Y. / Syosset","Science, Technology & Society",STS
+20,Andrea Kitahata,Forward,5-7,R-So.,"Hillsborough, Calif. / San Mateo",Symbolic Systems,SYMSYS
+21,Joelle Jung,Midfielder,5-4,Fr.,"San Jose, Calif. / Lynbrook",Undeclared,Undeclared
+23,Nya Harrison,Defender,5-4,Jr.,"San Diego, Calif. / Del Norte",Bioengineering,BIOE
+24,Maryn Wolf,Forward,5-7,Fr.,"San Diego, Calif. / Point Loma",Undeclared,Undeclared
+25,Samantha Williams,Forward,5-4,Sr.,"Laguna Beach, Calif. / JSerra","Science, Technology & Society",STS
+26,Esha Gupta,Defender,5-7,R-Fr.,"Mountain View, Calif. / Los Altos",Undeclared,Undeclared
+27,Kellie Pagador,Defender,5-6,Jr.,"Roseville, Calif. / Antelope",Psychology,PSYCH
+28,Logan Smith,Defender,5-7,So.,"Boise, Idaho / Boise",Undeclared,Undeclared
+30,Haley Craig,Goalkeeper,5-10,Jr.,"Dexter, Mich. / Dexter","Science, Technology & Society",STS
+31,Amalie Pianim,Forward,5-7,R-Fr.,"Burlingame, Calif. / Burlingame",Undeclared,Undeclared
+32,Aki Yuasa,Midfielder,5-5,So.,"Charlotte, Vt. / Homeschool",Undeclared,Undeclared
+33,Lumi Kostmayer,Forward,5-11,So.,"Southbury, Conn. / Pomperaug",Undeclared,Undeclared

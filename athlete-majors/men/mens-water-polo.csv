@@ -1,23 +1,23 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Nolan,Krutonog,Senior,Computer Science,CS,/sports/mens-water-polo/roster/nolan-krutonog/20035
-Griffen,Price,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/griffen-price/20045
-Liam,Harrison,Junior,Undeclared,Undeclared,/sports/mens-water-polo/roster/liam-harrison/20919
-Grant,Watson,Redshirt Sophomore,Economics,ECON,/sports/mens-water-polo/roster/grant-watson/20046
-Jack,Merrill,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/jack-merrill/20041
-Elai,Ben-Gal,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/elai-ben-gal/20686
-Chase,McFarland,Sophomore,Undeclared,Undeclared,/sports/mens-water-polo/roster/chase-mcfarland/20040
-Alex,Gheorghe,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/alex-gheorghe/20687
-CJ,Indart,Redshirt Sophomore,Computer Science,CS,/sports/mens-water-polo/roster/cj-indart/20033
-Riley,Pittman,Senior,Computer Science,CS,/sports/mens-water-polo/roster/riley-pittman/20044
-Ethan,Parrish,Senior,Sociology,SOC,/sports/mens-water-polo/roster/ethan-parrish/20043
-Andrew,Churukian,Graduate Student,Bioengineering,BIOE,/sports/mens-water-polo/roster/andrew-churukian/20047
-Daniel,Mnatsakanian,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/daniel-mnatsakanian/20689
-Tanner,Pulice,Junior,Sociology,SOC,/sports/mens-water-polo/roster/tanner-pulice/20690
-Gavin,West,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/gavin-west/20692
-Christopher,Arakelian,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/christopher-arakelian/20685
-Soren,Jensen,Senior,Management Science & Engineering,MS&E,/sports/mens-water-polo/roster/soren-jensen/20034
-Speedy,Laster,Redshirt Sophomore,Public Policy,PUBLPOL,/sports/mens-water-polo/roster/speedy-laster/20036
-Jackson,Painter,Senior,Mechanical Engineering,ME,/sports/mens-water-polo/roster/jackson-painter/20042
-Guido,Leonardi,Redshirt Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/guido-leonardi/20037
-Konstantinos,Mathiopoulos,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/konstantinos-mathiopoulos/20688
-Harrison,Rohlen,Freshman,Undeclared,Undeclared,/sports/mens-water-polo/roster/harrison-rohlen/20691
+#,Name,Pos.,Ht.,Wt.,Academic Year,Hometown,High School,Previous School,Major,Major (Abbreviated)
+1,Nolan Krutonog,Goalkeeper,6-1,185,Sr.,"Los Angeles, Calif.",Harvard-Westlake,,Computer Science,CS
+1A,Griffen Price,Goalkeeper,6-4,190,R-Fr.,"San Carlos, Calif.",Sacred Heart Preparatory,,Undeclared,Undeclared
+1B,Liam Harrison,Goalkeeper,6-4,230,Jr.,"Tustin, Calif.",Foothill,,Undeclared,Undeclared
+2,Grant Watson,Driver,6-3,190,R-So.,"Danville, Calif.",San Ramon Valley,,Economics,ECON
+3,Jack Merrill,Center Defender,6-4,220,R-Fr.,"Old Greenwich, Conn.",Rye Country Day School,,Undeclared,Undeclared
+4,Elai Ben-Gal,Utility,6-3,210,Fr.,"Herzliya, Israel",Harishonim,,Undeclared,Undeclared
+5,Chase McFarland,Driver,6-3,200,So.,"Berkeley, Calif.",Berkeley,,Undeclared,Undeclared
+6,Alex Gheorghe,Utility,6-3,330,Fr.,"Bucharest, Romania",Mark Twain International School,,Undeclared,Undeclared
+7,CJ Indart,Driver,6-4,205,R-So.,"Danville, Calif.",Monte Vista,,Computer Science,CS
+8,Riley Pittman,Driver,6-2,195,Sr.,"Irvine, Calif.",Woodbridge,,Computer Science,CS
+9,Ethan Parrish,Driver,6-3,205,Sr.,"Santa Barbara, Calif.",Dos Pueblos,,Sociology,SOC
+10,Andrew Churukian,Center,6-3,215,Gr.,"Atherton, Calif.",Sacred Heart Prep,,Bioengineering,BIOE
+11,Daniel Mnatsakanian,Driver,6-2,185,Fr.,"Los Angeles, Calif.",Harvard-Westlake,,Undeclared,Undeclared
+12,Tanner Pulice,Driver,5-10,190,Jr.,"Newport Beach, Calif.",Corona del Mar,UCLA,Sociology,SOC
+13,Gavin West,Driver,6-2,195,Fr.,"Old Greenwich, Conn.",Sacred Heart Prep,,Undeclared,Undeclared
+14,Christopher Arakelian,Utility,6-1,192,Fr.,"Studio City, Calif.",Harvard-Westlake,,Undeclared,Undeclared
+15,Soren Jensen,Driver,6-2,175,Sr.,"Orinda, Calif.",Campolindo,,Management Science & Engineering,MS&E
+16,Speedy Laster,Driver,6-2,190,R-So.,"Rancho Mission Viejo, Calif.",Santa Margarita Catholic,,Public Policy,PUBLPOL
+17,Jackson Painter,Driver,6-3,195,Sr.,"Orinda, Calif.",Miramonte,,Mechanical Engineering,ME
+21,Guido Leonardi,Driver,6-1,180,R-Fr.,"Bologna, Italy",International School of Bologna,,Undeclared,Undeclared
+22,Konstantinos Mathiopoulos,Driver,6-1,205,Fr.,"Piraeus, Greece",Athinaiki Agogi & Paideia,,Undeclared,Undeclared
+23,Harrison Rohlen,Driver,6-3,180,Fr.,"Atherton, Calif.",Sacred Heart Prep,,Undeclared,Undeclared

@@ -1,9 +1,9 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Sadie,Englemann,Senior,"Science, Technology and Society",STS,/sports/womens-golf/roster/sadie-englemann/20477
-Megha,Ganne,Sophomore,Undeclared,Undeclared,/sports/womens-golf/roster/megha-ganne/20478
-Rachel,Heck,Senior,Political Science,POLISCI,/sports/womens-golf/roster/rachel-heck/20479
-Yu Wen,Lu,Junior,"Science, Technology and Society",STS,/sports/womens-golf/roster/yu-wen-lu/20480
-Paula,Martín Sampedro,Freshman,Undeclared,Undeclared,/sports/womens-golf/roster/paula-mart-n-sampedro/20541
-Brooke,Seay,Graduate Student,Epidemiology and Clinical Research,,/sports/womens-golf/roster/brooke-seay/20481
-Caroline,Sturdza,Junior,"Science, Technology and Society",STS,/sports/womens-golf/roster/caroline-sturdza/20482
-Kelly,Xu,Sophomore,Undeclared,Undeclared,/sports/womens-golf/roster/kelly-xu/20483
+#,Full Name,Ht.,Wt.,Hometown / High School,Major,Major (Abbreviated),Academic Year
+,Sadie Englemann,5-5,,"Austin, Texas / Westlake","Science, Technology and Society",STS,Sr.
+,Megha Ganne,5-7,,"Holmdel, N.J. / Holmdel",Undeclared,Undeclared,So.
+,Rachel Heck,5-8,,"Memphis, Tenn. / St. Agnes Academy",Political Science,POLISCI,Sr.
+,Yu Wen Lu,5-6,,"Shanghai, China / Shanghai American School Puxi","Science, Technology and Society",STS,Jr.
+,Paula Martín Sampedro,5-3,,"Madrid, Spain / IES Ortega y Gasset",Undeclared,Undeclared,Fr.
+,Brooke Seay,5-3,,"San Diego, Calif. / Francis Parker School",Epidemiology and Clinical Research,,Gr.
+,Caroline Sturdza,5-7,,"Geneva, Switzerland / Moser School","Science, Technology and Society",STS,Jr.
+,Kelly Xu,5-7,,"Claremont, Calif. / Claremont",Undeclared,Undeclared,So.

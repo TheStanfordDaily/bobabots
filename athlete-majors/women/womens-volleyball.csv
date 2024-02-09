@@ -1,12 +1,17 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Kami,Miner,Senior,Economics,ECON,/sports/womens-volleyball/roster/kami-miner/20994
-Anna,Pringle,Junior,Undeclared,Undeclared,/sports/womens-volleyball/roster/anna-pringle/20996
-Taylor,Beaven,Senior,Human Biology,HUMBIO,/sports/womens-volleyball/roster/taylor-beaven/20987
-Jordyn,Harvey,Sophomore,Undeclared,Undeclared,/sports/womens-volleyball/roster/jordyn-harvey/20991
-Kelly,Belardi,Junior,Undeclared,Undeclared,/sports/womens-volleyball/roster/kelly-belardi/20988
-Elena,Oglivie,Fifth Year,"Science, Technology & Society",STS,/sports/womens-volleyball/roster/elena-oglivie/20995
-Elia,Rubin,Junior,Undeclared,Undeclared,/sports/womens-volleyball/roster/elia-rubin/20997
-Ipar,Kurt,Redshirt Freshman,Undeclared,Undeclared,/sports/womens-volleyball/roster/ipar-kurt/20993
-Sami,Francis,Senior,"Science, Technology and Society",STS,/sports/womens-volleyball/roster/sami-francis/20990
-Koko,Kirsch,Sophomore,Undeclared,Undeclared,/sports/womens-volleyball/roster/koko-kirsch/20992
-Julia,Blyashov,Sophomore,Undeclared,Undeclared,/sports/womens-volleyball/roster/julia-blyashov/20989
+#,Full Name,Pos.,Ht.,Wt.,Hometown / High School,Major,Major (Abbreviated),Class
+2,Kami Miner,Setter,6-0,,"Redondo Beach, Calif. / Redondo Union",Economics,ECON,Jr.
+3,Anna Pringle,Defensive Specialist,5-10,,"La Jolla, Calif. / Cathedral Catholic",Undeclared,Undeclared,So.
+4,Taylor Beaven,Defensive Specialist,5-9,,"St. Louis, Mo. / Seckman Senior",Human Biology,HUMBIO,Jr.
+5,Jordyn Harvey,Opposite,6-1,,"Salt Lake City, Utah / Bountiful High School",Undeclared,Undeclared,Fr.
+7,Kelly Belardi,Setter,5-9,,"Manhattan Beach, Calif. / Marymount",Undeclared,Undeclared,So.
+8,Malia Tufuga,Outside Hitter,6-1,,"Costa Mesa, Calif. / Costa Mesa","Science, Technology & Society",STS,Sr.
+9,Elena Oglivie,Libero,5-10,,"Honolulu, Hawaii / Iolani School","Science, Technology & Society",STS,Sr.
+10,Kendall Kipp,Opposite,6-5,,"Newport Beach, Calif. / Corona del Mar",Human Biology,HUMBIO,5th
+12,Annabelle Smith,Middle Blocker,6-2,,"Southlake, Texas / Carroll",Biology,BIO,Sr.
+13,Elia Rubin,Outside Hitter,6-1,,"Santa Monica, Calif. / Marymount",Undeclared,Undeclared,So.
+14,McKenna Vicini,Middle Blocker,6-2,,"Lexington, Ky. / Lexington Catholic",Human Biology,HUMBIO,R-Sr.
+15,Ipar Kurt,Outside Hitter,6-2,,"Istanbul, Turkey / Robert College",Undeclared,Undeclared,Fr.
+17,Sami Francis,Middle Blocker,6-6,,"San Diego, Calif. / La Jolla Country Day School","Science, Technology and Society",STS,Jr.
+19,Koko Kirsch,Defensive Specialist,5-9,,"Trabuco Canyon, Calif. / El Toro",Undeclared,Undeclared,Fr.
+21,Julia Blyashov,Outside Hitter,6-3,,"Carlsbad, Calif. / Cathedral Catholic",Undeclared,Undeclared,Fr.
+22,Caitie Baird,Outside Hitter,6-3,,"Indianapolis, Ind. / Perry Meridian",Human Biology,HUMBIO,R-Sr.

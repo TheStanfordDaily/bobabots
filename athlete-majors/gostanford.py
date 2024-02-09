@@ -15,17 +15,21 @@ with open("roster-urls.json") as roster_file:
 
 
 def player_profile(url: str) -> dict:
-    html_content = requests.get(url).text
+    print(url)
+    html_content = requests.get(url, allow_redirects=True)
+    print(html_content.status_code)
+    print(html_content)
     soup = BeautifulSoup(html_content, "html.parser")
-    sidearm = soup.find("div", class_="sidearm-roster-player-fields")
-
-    if sidearm is None:
-        return {}
-
+    # print(soup)
+    # sidearm = soup.find("div", class_="sidearm-roster-player-fields")
+    #
+    # if sidearm is None:
+    #     return {}
+    print(url)
     major_abbrev = ""
 
     try:
-        major = sidearm.find("dt", text="Major").find_next_sibling("dd").text
+        major = soup.find("dt", text="Major").find_next_sibling("dd").text
         if major in subject_abbreviations:
             major_abbrev = subject_abbreviations[major]
         else:
@@ -36,10 +40,10 @@ def player_profile(url: str) -> dict:
     except AttributeError:
         major = ""
 
-    name_sidearm = soup.find("span", class_="sidearm-roster-player-name")
-    first_name = name_sidearm.find("span", class_="sidearm-roster-player-first-name").text
-    last_name = name_sidearm.find("span", class_="sidearm-roster-player-last-name").text
-    academic_class = sidearm.find("dt", text="Class").find_next_sibling("dd").text
+    print(soup.find("span"))
+    first_name = soup.find("span", class_="sidearm-roster-player-first-name").text
+    last_name = soup.find("span", class_="sidearm-roster-player-last-name").text
+    academic_class = soup.find("dt", text="Class").find_next_sibling("dd").text
 
     return {
         "First Name": first_name,
@@ -72,6 +76,44 @@ def roster_dataset(url: str, description: str | None = None) -> pd.DataFrame:
         player_data.append(profile)
 
     return pd.DataFrame(player_data)
+
+
+def roster_table(url: str) -> pd.DataFrame:
+    if "football" in url:
+        try:
+            with open("football.html") as file:
+                html_content = file.read()
+        except FileNotFoundError:
+            return pd.DataFrame()
+    else:
+        response = requests.get(f"{url}?view=2", allow_redirects=True)
+        html_content = response.text
+
+    soup = BeautifulSoup(html_content, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
+    # find table with "Roster" in caption
+    table = soup.find("caption", text=lambda text: "Roster" in text).find_parent("table")
+
+    headers = [th.text for th in table.thead.find_all("th")]
+    if "Major" in headers:
+        major_index = headers.index("Major")
+    else:
+        print(f"Major not found in {url}")
+        return pd.DataFrame()
+    headers.insert(major_index + 1, "Major (Abbreviated)")
+    data = []
+
+    for tr in table.tbody.find_all("tr"):
+        row = [td.text.strip() for td in tr.find_all("td")]
+        major_abbrev = ""
+        major = row[major_index]
+        close_matches = list(filter(lambda s: distance(major, s) < 10, subject_abbreviations.keys()))
+        close_matches.sort(key=lambda s: distance(major, s))
+        if len(close_matches) > 0:
+            major_abbrev = subject_abbreviations[close_matches[0]]
+        row.insert(major_index + 1, major_abbrev)
+        data.append(row)
+
+    return pd.DataFrame(data, columns=headers)
 
 
 def simplified_majors(major_counts):
@@ -135,12 +177,15 @@ def format_to_flourish():
     sorted_pivot_table.to_csv("majors_and_sports.csv")
 
 
+# Use roster_table for all sports except men's tennis, artistic swimming, cross country, and sailing.
+
 def write_datasets():
     for group_name, roster_group in roster_urls.items():
         for sport, url in roster_group.items():
-            df = roster_dataset(url, sport)
+            df = roster_table(f"{url}/2023")
             df.to_csv(f"{group_name}/{sport}.csv", index=False)
 
 
+# need to redo the football one
 if __name__ == "__main__":
     write_datasets()

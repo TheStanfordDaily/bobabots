@@ -1,24 +1,27 @@
-First Name,Last Name,Class,Major,Major (Abbreviated),URL
-Maya,Avital,Senior,Symbolic Systems,SYMSYS,/sports/womens-water-polo/roster/maya-avital/20298
-Jackie,King,Sophomore,Undeclared,Undeclared,/sports/womens-water-polo/roster/jackie-king/20306
-Christine,Carpenter,Freshman,Undeclared,Undeclared,/sports/womens-water-polo/roster/christine-carpenter/20486
-Christina,Hicks,Senior,Human Biology,HUMBIO,/sports/womens-water-polo/roster/christina-hicks/20304
-Sophia,Sanders,Junior,Undeclared,Undeclared,/sports/womens-water-polo/roster/sophia-sanders/20311
-Maggie ,Hawkins,Sophomore,Undeclared,Undeclared,/sports/womens-water-polo/roster/maggie-hawkins/20303
-Alissa,Pascual,Junior,Undeclared,Undeclared,/sports/womens-water-polo/roster/alissa-pascual/20309
-Jewel,Roemer,Redshirt Senior,Human Biology,HUMBIO,/sports/womens-water-polo/roster/jewel-roemer/20310
-Avery,Montiel,Freshman,Undeclared,Undeclared,/sports/womens-water-polo/roster/avery-montiel/20484
-Eleanor,Facey,Junior,Undeclared,Undeclared,/sports/womens-water-polo/roster/eleanor-facey/20301
-Kamryn,Barone,Freshman,Undeclared,Undeclared,/sports/womens-water-polo/roster/kamryn-barone/20485
-Talie,Wilmans,Senior,Mechanical Engineering,ME,/sports/womens-water-polo/roster/talie-wilmans/20315
-Sam,Sternfels,Redshirt Junior,Engineering,ENGR,/sports/womens-water-polo/roster/sam-sternfels/20312
-Sophie,Wallace,Fifth Year,"Science, Technology and Society",STS,/sports/womens-water-polo/roster/sophie-wallace/20845
-Celeste,Wijnbelt,Senior,Human Biology,HUMBIO,/sports/womens-water-polo/roster/celeste-wijnbelt/20314
-Jenna,Flynn,Redshirt Sophomore,Undeclared,Undeclared,/sports/womens-water-polo/roster/jenna-flynn/20302
-Reagan,McEachen,Freshman,Undeclared,Undeclared,/sports/womens-water-polo/roster/reagan-mceachen/20487
-Skyler,Jones,Senior,Human Biology,HUMBIO,/sports/womens-water-polo/roster/skyler-jones/20305
-Ella,Woodhead,Redshirt Sophomore,Undeclared,Undeclared,/sports/womens-water-polo/roster/ella-woodhead/20316
-Ryann,Neushul,Redshirt Senior,Human Biology,HUMBIO,/sports/womens-water-polo/roster/ryann-neushul/20308
-Quinn,Healy,Freshman,Undeclared,Undeclared,/sports/womens-water-polo/roster/quinn-healy/20488
-Serena,Browne,Redshirt Freshman,Undeclared,Undeclared,/sports/womens-water-polo/roster/serena-browne/20300
-Kate,Morgan,Sophomore,Undeclared,Undeclared,/sports/womens-water-polo/roster/kate-morgan/20307
+Full Name,Pos.,Ht.,Academic Year,Hometown,High School,Major,Major (Abbreviated),#
+Maya Avital,Goalkeeper,6-2,Jr.,"Newport Beach, Calif.",Corona del Mar,Symbolic Systems,SYMSYS,1
+Jackie King,Goalkeeper,5-11,Fr.,"Los Gatos, Calif.",Los Gatos,Undeclared,Undeclared,1A
+Lexi Rowell,2-Meters,5-8,Sr.,"Lafayette, Calif.",Acalanes,International Relations,INTNLREL,2
+Christina Hicks,2-Meters,5-11,Jr.,"Honolulu, Hawaii",Punahou,Human Biology,HUMBIO,3
+Floranne Carroll,Driver,5-9,Sr.,"Montreal, Quebec, Canada",College Marianopolis,Bioengineering,BIOE,4
+Katie Lyons,Driver,5-8,Sr.,"Orinda, Calif.",Miramonte,Human Biology,HUMBIO,5
+Alissa Pascual,Driver,5-9,So.,"São Paulo, Brazil",Gulliver Prep,Undeclared,Undeclared,6
+Jewel Roemer,Driver,5-6,Jr.,"Martinez, Calif.",Acalanes,Human Biology,HUMBIO,7
+Eleanor Facey,2-Meters,5-9,So.,"Menlo Park, Calif.",Sacred Heart Prep,Undeclared,Undeclared,8
+Aria Fischer,2-Meters,6-0,R-Sr.,"Laguna Beach, Calif.",Laguna Beach,English,ENGLISH,9
+Hannah Constandse,Driver,5-7,Sr.,"Irvine, Calif.",Mater Dei,Product Design,DESIGN,10
+Talie Wilmans,Driver,5-7,Jr.,"Pasadena, Calif.",Polytechnic,Mechanical Engineering,ME,11
+Sam Sternfels,Driver,5-7,R-So.,"Mill Valley, Calif.",Tamalpais,Engineering,ENGR,12
+Sophie Wallace,2-Meter Defender,5-8,Sr.,"Newport Beach, Calif.",Corona del Mar,"Science, Technology and Society",STS,13
+Shaye Story,Driver,5-10,So.,"Mililani, Hawaii",Kamehameha High School,Undeclared,Undeclared,14
+Celeste Wijnbelt,2-Meter Defender,5-10,Jr.,"Tustin, Calif.",Foothill,Human Biology,HUMBIO,15
+Jenna Flynn,Driver,5-8,Fr.,"San Jose, Calif.",Leland,Undeclared,Undeclared,16
+Bella Bachler,Driver,5-7,So.,"Atherton, Calif.",Sacred Heart Prep,Undeclared,Undeclared,17
+Skyler Jones,2-Meter Defender,5-10,Jr.,"Danville, Calif.",San Ramon Valley,Human Biology,HUMBIO,18
+Ella Woodhead,2-Meter Defender,5-10,Fr.,"San Rafael, Calif.",Sacred Heart Prep,Undeclared,Undeclared,19
+Ryann Neushul,Driver,5-6,R-Jr.,"Goleta, Calif.",Dos Pueblos,Human Biology,HUMBIO,20
+Maggie  Hawkins,2-Meters,6-2,Fr.,"Lafayette, Calif.",Campolindo,Undeclared,Undeclared,21
+Kai Blankenship,Driver,5-10,Fr.,"Thousand Oaks, Calif.",Agoura,Undeclared,Undeclared,22
+Sophia Sanders,Driver,5-10,So.,"La Jolla, Calif.",The Bishop's School,Undeclared,Undeclared,23
+Serena Browne,2-Meter Defender,6-2,Fr.,"Montreal, Quebec, Canada",John Rennie,Undeclared,Undeclared,24
+Kate Morgan,Driver,5-10,Fr.,"Pebble Beach, Calif.",Stevenson School,Undeclared,Undeclared,25
