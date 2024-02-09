@@ -112,23 +112,11 @@ for pattern in patterns:
         df = df[~df['Class'].str.contains("Graduate", case=False)]
 
         # Extract the sport from the URL
-        df['Sport'] = df['URL'].apply(lambda x: x.split('/')[2].replace('-', ' ').title())
+        df['Sport'] = df['URL'].apply(lambda x: x.split('/')[2].replace('-', ' ').title().replace("Mens", "Men\u2019s").replace("Womens", "Women\u2019s"))
         list_of_dfs.append(df)
 
 
-def simplified_majors():
-    all_data = pd.concat(list_of_dfs, ignore_index=True)
-
-    # Filter out "Undeclared" majors
-    all_data = all_data[all_data['Major (Abbreviated)'] != 'Undeclared']
-
-    # Use "Major (Abbreviated)" if it's not empty, otherwise use "Major"
-    all_data['Major'] = all_data.apply(
-        lambda x: x['Major (Abbreviated)'] if x['Major (Abbreviated)'] != '' else x['Major'], axis=1)
-
-    # Group the data by 'Major' and count the total number of athletes
-    major_counts = all_data.groupby('Major').size().reset_index(name='Total Athletes')
-
+def simplified_majors(major_counts):
     # Sort and identify the top 10 most common majors
     top_majors = major_counts.sort_values('Total Athletes', ascending=False).head(10)
 
@@ -154,7 +142,7 @@ all_data['Major'] = all_data.apply(lambda x: x['Major (Abbreviated)'] if x['Majo
 # Group the data by 'Major' and count the total number of athletes
 major_counts = all_data.groupby('Major').size().reset_index(name='Total Athletes')
 
-simplified_majors = simplified_majors()
+simplified_majors = simplified_majors(major_counts)
 simplified_majors.to_csv('simplified_majors.csv', index=False)
 
 # Sort by 'Major'
