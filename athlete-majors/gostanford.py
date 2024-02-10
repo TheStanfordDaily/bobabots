@@ -15,21 +15,16 @@ with open("roster-urls.json") as roster_file:
 
 
 def player_profile(url: str) -> dict:
-    print(url)
-    html_content = requests.get(url, allow_redirects=True)
-    print(html_content.status_code)
-    print(html_content)
-    soup = BeautifulSoup(html_content, "html.parser")
-    # print(soup)
-    # sidearm = soup.find("div", class_="sidearm-roster-player-fields")
-    #
-    # if sidearm is None:
-    #     return {}
-    print(url)
+    response = requests.get(url, allow_redirects=True)
+    soup = BeautifulSoup(response.text, "html.parser")
+    sidearm = soup.find("div", class_="sidearm-roster-player-fields") or soup.find("div", class_="sidearm-roster-player-header-details")
+
+    if sidearm is None:
+        return {}
     major_abbrev = ""
 
     try:
-        major = soup.find("dt", text="Major").find_next_sibling("dd").text
+        major = sidearm.find("dt", text="Major").find_next_sibling("dd").text
         if major in subject_abbreviations:
             major_abbrev = subject_abbreviations[major]
         else:
@@ -40,7 +35,6 @@ def player_profile(url: str) -> dict:
     except AttributeError:
         major = ""
 
-    print(soup.find("span"))
     first_name = soup.find("span", class_="sidearm-roster-player-first-name").text
     last_name = soup.find("span", class_="sidearm-roster-player-last-name").text
     academic_class = soup.find("dt", text="Class").find_next_sibling("dd").text
@@ -90,7 +84,7 @@ def roster_table(url: str) -> pd.DataFrame:
         html_content = response.text
 
     soup = BeautifulSoup(html_content, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
-    # find table with "Roster" in caption
+    # Find table with "Roster" in caption.
     table = soup.find("caption", text=lambda text: "Roster" in text).find_parent("table")
 
     headers = [th.text for th in table.thead.find_all("th")]
@@ -177,12 +171,15 @@ def format_to_flourish():
     sorted_pivot_table.to_csv("majors_and_sports.csv")
 
 
-# Use roster_table for all sports except men's tennis, artistic swimming, cross country, and sailing.
-
 def write_datasets():
     for group_name, roster_group in roster_urls.items():
         for sport, url in roster_group.items():
-            df = roster_table(f"{url}/2023")
+            print(sport, url)
+            # Use roster_table for all sports except men's tennis, artistic swimming, cross country, and sailing.
+            if sport in ["mens-tennis", "artswim", "cross-country", "sailing"]:
+                df = roster_dataset(f"{url}/2023", sport)
+            else:
+                df = roster_table(f"{url}/2023")
             df.to_csv(f"{group_name}/{sport}.csv", index=False)
 
 
