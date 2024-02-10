@@ -73,17 +73,8 @@ def roster_dataset(url: str, description: str | None = None) -> pd.DataFrame:
 
 
 def roster_table(url: str) -> pd.DataFrame:
-    if "football" in url:
-        try:
-            with open("football.html") as file:
-                html_content = file.read()
-        except FileNotFoundError:
-            return pd.DataFrame()
-    else:
-        response = requests.get(f"{url}?view=2", allow_redirects=True)
-        html_content = response.text
-
-    soup = BeautifulSoup(html_content, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
+    response = requests.get(f"{url}?view=2", allow_redirects=True)
+    soup = BeautifulSoup(response.text, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
     # Find table with "Roster" in caption.
     table = soup.find("caption", text=lambda text: "Roster" in text).find_parent("table")
 
@@ -102,7 +93,7 @@ def roster_table(url: str) -> pd.DataFrame:
         major = row[major_index]
         close_matches = list(filter(lambda s: distance(major, s) < 10, subject_abbreviations.keys()))
         close_matches.sort(key=lambda s: distance(major, s))
-        if len(close_matches) > 0:
+        if len(close_matches) > 0 and major:
             major_abbrev = subject_abbreviations[close_matches[0]]
         row.insert(major_index + 1, major_abbrev)
         data.append(row)
@@ -174,7 +165,6 @@ def format_to_flourish():
 def write_datasets():
     for group_name, roster_group in roster_urls.items():
         for sport, url in roster_group.items():
-            print(sport, url)
             # Use roster_table for all sports except men's tennis, artistic swimming, cross country, and sailing.
             if sport in ["mens-tennis", "artswim", "cross-country", "sailing"]:
                 df = roster_dataset(f"{url}/2023", sport)
