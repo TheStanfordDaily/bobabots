@@ -21,6 +21,7 @@ def player_profile(url: str) -> dict:
 
     if sidearm is None:
         return {}
+
     major_abbrev = ""
 
     try:
@@ -77,13 +78,14 @@ def roster_table(url: str) -> pd.DataFrame:
     soup = BeautifulSoup(response.text, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
     # Find table with "Roster" in caption.
     table = soup.find("caption", text=lambda text: "Roster" in text).find_parent("table")
-
     headers = [th.text for th in table.thead.find_all("th")]
+
     if "Major" in headers:
         major_index = headers.index("Major")
     else:
         print(f"Major not found in {url}")
         return pd.DataFrame()
+
     headers.insert(major_index + 1, "Major (Abbreviated)")
     data = []
 
