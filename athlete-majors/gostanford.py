@@ -123,6 +123,7 @@ def simplified_majors(major_counts):
 def format_to_flourish():
     # Define patterns for each folder.
     patterns = ["men/*.csv", "women/*.csv", "mixed/*.csv"]
+    year_columns = ["Class", "Academic Year"]
     list_of_dfs = []
 
     for pattern in patterns:
@@ -130,11 +131,14 @@ def format_to_flourish():
         for filename in csv_files:
             df = pd.read_csv(filename)
 
-            # Filter out rows where "Class" contains "Graduate" or "graduate" value.
-            df = df[~df["Class"].str.contains("Graduate", case=False)]
+            for col in year_columns:
+                if col in df.columns:
+                    # Filter out rows where "Gr" or "gr" appear in the specified column.
+                    df = df[~df[col].str.contains("Gr", case=False, na=False)]
+                    break  # Stop checking once the relevant column is found and filtered.
 
             # Extract the sport from the URL.
-            df["Sport"] = df["URL"].apply(lambda x: x.split("/")[2].replace("-", " ").title().replace("Mens", "Men\u2019s").replace("Womens", "Women\u2019s"))
+            df["Sport"] = filename[filename.index("/") + 1:filename.index(".")]
             list_of_dfs.append(df)
 
     # Concatenate all DataFrames into a single DataFrame.
@@ -175,6 +179,5 @@ def write_datasets():
             df.to_csv(f"{group_name}/{sport}.csv", index=False)
 
 
-# need to redo the football one
 if __name__ == "__main__":
-    write_datasets()
+    format_to_flourish()
