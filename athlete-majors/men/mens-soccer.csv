@@ -1,7 +1,7 @@
 #,Full Name,Pos.,Ht.,Wt.,Hometown / High School,Major,Major (Abbreviated),Academic Year
 2,Noah Adnan,Defender,6-2,180,"Gaithersburg, Md. / Quince Orchard",Management Science & Engineering,MS&E,Sr.
 4,Conner Maurer,Defender,6-1,168,"Levittown, N.Y. / General Douglas MacArthur",Economics,ECON,Sr.
-5,Nolan Evers,Defender,6-2,175,"Pasadena, Calif. / Marshall Fundamental","GR: Community Health and Prevention Research, UG: Human Biology",,R-Sr.
+5,Nolan Evers,Defender,6-2,175,"Pasadena, Calif. / Marshall Fundamental","GR: Community Health and Prevention Research, UG: Human Biology",HUMBIO,R-Sr.
 6,Mark Fisher,Midfielder,5-11,165,"Grand Blanc, Mich. / Grand Blanc",Bioengineering,BIOE,R-Sr.
 7,Fletcher Bank,Midfielder,5-10,165,"Bakersfield, Calif. / Garces Memorial",Undeclared,Undeclared,So.
 8,Will Reilly,Midfielder,5-10,160,"Decatur, Ga. / The Paideia School",Symbolic Systems,SYMSYS,Jr.
@@ -24,7 +24,7 @@
 27,Dylan Groeneveld,Defender,6-1,175,"Coronado, Calif. / Coronado",Undeclared,Undeclared,Fr.
 28,Palmer Bank,Defender,6-0,185,"Bakersfield, Calif. / Garces Memorial",Undeclared,Undeclared,R-Fr.
 29,Takashi Sasaki,Defender,5-9,150,"Issaquah, Wash. / Issaquah",Undeclared,Undeclared,R-Fr.
-30,Eliot Jones,Goalkeeper,6-2,175,"New Britain, Conn. / K12 International Academy","GR: Computer Science, UG: Mathematical and Computational Science",,Sr.
+30,Eliot Jones,Goalkeeper,6-2,175,"New Britain, Conn. / K12 International Academy","GR: Computer Science, UG: Mathematical and Computational Science",MCS,Sr.
 31,Rowan Schnebly,Goalkeeper,6-1,175,"Portland, Ore. / Lincoln",Undeclared,Undeclared,R-Fr.
 32,Jack Morris,Goalkeeper,6-3,210,"Eau Claire, Wis. / Wisconsin Connections Academy",Computer Science,CS,R-So.
 33,James Swomley,Goalkeeper,6-6,195,"Newton, Mass. / Newton North",Computational and Mathematical Engineering,CME,Gr.
