@@ -1,37 +1,35 @@
-#,Full Name,Pos.,Ht.,Wt.,Year,B/T,Hometown / High School,Major,Major (Abbreviated)
-1,Owen Cobb,INF/OF,6-3,197,Sr.,R/R,"Seattle, Wash. / Seattle Academy",Management Science & Engineering / MS&E (MS),MS&E
-2,Drew Bowser,INF,6-4,226,Jr.,R/R,"Los Angeles, Calif. / Harvard-Westlake","Science, Technology & Society",STS
-4,Saborn Campbell,OF,5-11,202,So.,R/R,"Bloomfield Hills, Mich. / Detroit Country Day",Management Science & Engineering,MS&E
-5,Trevor Haskins,INF,6-0,180,So.,R/R,"San Jose, Calif. / Valley Christian",Management Science & Engineering,MS&E
-6,Braden Montgomery,OF/RHP,6-2,217,So.,S/R,"Madison, Miss. / Madison Central",Undeclared,Undeclared
-10,Malcolm Moore,C/1B,6-1,215,Fr.,L/R,"Sacramento, Calif. / C.K. McClatchy",Undeclared,Undeclared
-11,Alberto Rios,C,6-0,203,Jr.,R/R,"Bellflower, Calif. / St. John Bosco",Management Science & Engineering,MS&E
-12,Tommy Troy,INF/OF,5-10,197,Jr.,R/R,"Los Gatos, Calif. / Los Gatos","Science, Technology & Society",STS
-13,Ethan Hott,OF,5-10,183,Fr.,R/R,"Paradise Valley, Ariz. / Chaparral",Undeclared,Undeclared
-14,Cort MacDonald,OF,6-0,188,Fr.,L/L,"Arlington, Texas / Pantego Christian Academy",Undeclared,Undeclared
-15,Jimmy Nati,INF,6-0,207,Fr.,R/R,"Sydney, Australia / Oakhill College",Undeclared,Undeclared
-18,Toran O'Harran,RHP,6-0,187,Fr.,R/R,"Rocklin, Calif. / Rocklin",Undeclared,Undeclared
-19,Henry Gargus,1B/OF,6-0,212,Sr.,L/L,"Yakima, Wash. / Davis","Science, Technology & Society",STS
-20,Nathan Fleischli,RHP,6-4,205,Sr.,R/R,"Atherton, Calif. / Sacred Heart Prep",Computer Science / CS (MS),
-21,Charlie Saum,C,6-0,200,So.,R/R,"Thousand Oaks, Calif. / Thousand Oaks","Science, Technology & Society",STS
-22,Eddie Park,OF,6-1,192,Jr.,L/L,"San Jose, Calif. / Valley Christian",Management Science & Engineering,MS&E
-23,Joey Dixon,RHP,6-2,204,Jr.,R/R,"South Jordan, Utah / Bingham","Science, Technology & Society",STS
-25,Nick Dugan,RHP,6-0,198,Fr.,R/R,"Eureka, Calif. / St. Bernard’s Academy",Undeclared,Undeclared
-26,Quinn Mathews,LHP,6-5,188,Sr.,L/L,"Aliso Viejo, Calif. / Aliso Niguel","Science, Technology & Society",STS
-27,Temo Becerra,INF,6-0,181,So.,R/R,"Clovis, Calif. / Buchanan","Science, Technology & Society",STS
-28,Matt Scott,RHP,6-7,231,Fr.,R/R,"Redding, Conn. / Joel Barlow",Undeclared,Undeclared
-29,Cole Hinkelman,OF,6-5,219,Sr.,L/R,"Sammamish, Wash. / Skyline","Science, Technology & Society",STS
-30,Brandt Pancer,RHP,6-0,197,Jr.,R/R,"Suwanee, Ga. / North Gwinett",Management Science & Engineering,MS&E
-31,Carter Graham,1B,6-2,232,Jr.,R/R,"Los Angeles, Calif. / Chaminade College Prep","Science, Technology & Society",STS
-33,Gabe Springer,INF,6-0,187,Fr.,S/R,"Boulder, Colo. / Fairview",Undeclared,Undeclared
-34,Ryan Bruno,LHP,6-3,221,Jr.,L/L,"Wellington, Fla. / American Heritage School",Communication,COMM
-36,Ty Uber,RHP,6-4,243,So.,R/R,"Cameron Park, Calif. / Ponderosa","Science, Technology & Society",STS
-37,Tommy O'Rourke,RHP,6-3,210,Jr.,R/R,"Morristown, N.J. / Seton Hall Prep","Science, Technology & Society",STS
-38,Trevor Moore,RHP,6-1,213,Fr.,R/R,"Golden, Colo. / Mullen",Undeclared,Undeclared
-39,Jake Sapien,RHP/1B,6-2,223,So.,R/R,"Atwater, Calif. / Buhach Colony","Science, Technology & Society",STS
-40,Nicolas Lopez,LHP,6-4,217,Gr.,R/L,"Redwood City, Calif. / Junipero Serra",Human Biology,HUMBIO
-41,Matt Swartz,LHP,6-4,235,R-Jr.,L/L,"Huntington Beach, Calif. / Edison",Economics,ECON
-44,Brett Blair,OF/C,6-0,216,So.,R/R,"Gainesville, Fla. / Buchholz",Management Science & Engineering,MS&E
-45,Max Meier,RHP,6-2,216,Sr.,L/R,"Belmont, Mass. / Lawrence Academy","Science, Technology & Society",STS
-46,Jaden Bruno,RHP,6-3,215,R-So.,R/R,"Wellington, Fla. / American Heritage School",Management Science & Engineering,MS&E
-49,Drew Dowd,LHP,6-2,206,Jr.,L/L,"Belmont, Calif. / Junipero Serra","Science, Technology & Society",STS
+#,Full Name,Pos.,Ht.,Wt.,Year,B/T,Hometown,High School,Previous School,Major,Major (Abbreviated)
+1,Owen Cobb,INF/OF,6-3,195,Gr.,R/R,"Seattle, Wash.",Seattle Academy,,Management Science & Engineering / MS&E (MS),
+2,Temo Becerra,INF,6-1,190,Jr.,R/R,"Clovis, Calif.",Buchanan,,"Science, Technology & Society",STS
+4,Saborn Campbell,OF,5-11,202,Jr.,R/R,"Bloomfield Hills, Mich.",Detroit Country Day,,Management Science & Engineering,MS&E
+5,Trevor Haskins,INF,6-0,183,Jr.,R/R,"San Jose, Calif.",Valley Christian,,Management Science & Engineering,MS&E
+6,Jimmy Nati,INF,6-1,213,So.,R/R,"Sydney, Australia",Oakhill College,,Undeclared,Undeclared
+10,Malcolm Moore,C,6-2,216,So.,L/R,"Sacramento, Calif.",C.K. McClatchy,,Undeclared,Undeclared
+11,Luke Lavin,C/1B,6-3,200,Fr.,L/R,"Laguna Beach, Calif.",Santa Margarita Catholic,,Undeclared,Undeclared
+12,Toran O'Harran,RHP,6-1,198,So.,R/R,"Rocklin, Calif.",Rocklin,,Undeclared,Undeclared
+13,Ethan Hott,OF,5-10,185,So.,R/R,"Paradise Valley, Ariz.",Chaparral,,Undeclared,Undeclared
+14,Sebastian David,INF,6-1,193,Fr.,R/R,"Medina, Wash.",Lakeside,,Undeclared,Undeclared
+15,Champ Hampton,OF,5-10,208,Fr.,R/R,"Ooltewah, Tenn.",Baylor School,,Undeclared,Undeclared
+16,Brandon Larson,1B,6-6,235,So.,L/R,"Rocklin, Calif.",Rocklin,UC San Diego,Undeclared,Undeclared
+18,Kassius Thomas,RHP,6-2,190,So.,R/R,"Los Angeles, Calif.",Sierra Canyon,Duke,Undeclared,Undeclared
+19,Joey Volchko,RHP,6-4,205,Fr.,R/R,"Visalia, Calif.",Redwood,,Undeclared,Undeclared
+20,Nathan Fleischli,RHP,6-4,205,Gr.,R/R,"Atherton, Calif.",Sacred Heart Prep,,Computer Science / CS (MS),
+21,Charlie Saum,C,6-0,200,Jr.,R/R,"Thousand Oaks, Calif.",Thousand Oaks,,"Science, Technology & Society",STS
+22,Cort MacDonald,OF,6-1,197,So.,L/L,"Arlington, Texas",Pantego Christian Academy,,Undeclared,Undeclared
+23,Jaden Bruno,RHP,6-4,222,Sr.,R/R,"Wellington, Fla.",American Heritage School,,Management Science & Engineering,MS&E
+24,Aidan Keenan,RHP,6-1,192,Fr.,R/R,"Morgan Hill, Calif.",Live Oak,,Undeclared,Undeclared
+25,Nick Dugan,RHP,6-2,202,So.,R/R,"Eureka, Calif.",St. Bernard’s Academy,,Undeclared,Undeclared
+26,Sam Garewal,LHP,6-4,230,So.,L/L,"San Diego, Calif.",Canyon Crest Academy,Northwestern,Undeclared,Undeclared
+27,Brady Reynolds,C/OF,6-1,218,Fr.,L/R,"Bakersfield, Calif.",Liberty,,Undeclared,Undeclared
+28,Matt Scott,RHP,6-7,247,So.,R/R,"Redding, Conn.",Joel Barlow,,Undeclared,Undeclared
+30,Ryan Speshyock,RHP,6-1,199,Fr.,R/R,"Goleta, Calif.",Dos Pueblos,,Undeclared,Undeclared
+33,Gabe Springer,INF,6-0,205,So.,S/R,"Boulder, Colo.",Fairview,,Undeclared,Undeclared
+34,Trevor Moore,RHP,6-1,210,So.,R/R,"Golden, Colo.",Mullen,,Undeclared,Undeclared
+36,Ty Uber,RHP,6-4,240,Jr.,R/R,"Cameron Park, Calif.",Ponderosa,,"Science, Technology & Society",STS
+37,Tommy O'Rourke,RHP,6-2,218,Sr.,R/R,"Morristown, N.J.",Seton Hall Prep,,"Science, Technology & Society",STS
+38,Jack Svinth,RHP,6-1,197,Fr.,R/R,"Rancho Santa Margarita, Calif.",Santa Margarita Catholic,,Undeclared,Undeclared
+39,Jake Sapien,1B,6-2,220,Jr.,R/R,"Atwater, Calif.",Buhach Colony,,"Science, Technology & Society",STS
+40,Ben Reimers,RHP,6-3,193,Fr.,R/R,"Aliso Viejo, Calif.",JSerra Catholic,,Undeclared,Undeclared
+42,Christian Lim,LHP,5-10,193,Fr.,L/L,"Nashville, Tenn.",Montgomery Bell Academy,,Undeclared,Undeclared
+44,Brett Blair,OF/C,6-1,225,Jr.,R/R,"Gainesville, Fla.",Buchholz,,Management Science & Engineering,MS&E
+50,Gavin Nalu,LHP,6-0,205,Jr.,L/L,"La Mesa, Calif.",Cathedral Catholic,,Public Policy,PUBLPOL

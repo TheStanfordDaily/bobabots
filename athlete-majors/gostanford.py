@@ -49,15 +49,12 @@ def player_profile(url: str) -> dict:
     }
 
 
+def roster_url(sport: str, year: int) -> str:
+    return f"https://gostanford.com/sports/{sport}/roster/{year}"
+
+
 def roster_dataset(url: str, description: str | None = None) -> pd.DataFrame:
-    if url == roster_urls["men"]["football"]:
-        try:
-            with open("football.html") as file:
-                html_content = file.read()
-        except FileNotFoundError:
-            return pd.DataFrame()
-    else:
-        html_content = requests.get(url).text
+    html_content = requests.get(url).text
     soup = BeautifulSoup(html_content, "html.parser").find("div", class_="sidearm-roster-templates-container").find("section").find("ul", class_="sidearm-roster-players")
 
     # Find all rows representing players on the team.
@@ -77,6 +74,7 @@ def roster_table(url: str) -> pd.DataFrame:
     response = requests.get(f"{url}?view=2", allow_redirects=True)
     soup = BeautifulSoup(response.text, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
     # Find table with "Roster" in caption.
+    print(url)
     table = soup.find("caption", text=lambda text: "Roster" in text).find_parent("table")
     headers = [th.text for th in table.thead.find_all("th")]
 
@@ -170,14 +168,18 @@ def format_to_flourish():
 
 def write_datasets():
     for group_name, roster_group in roster_urls.items():
-        for sport, url in roster_group.items():
-            # Use roster_table for all sports except men's tennis, artistic swimming, cross country, and sailing.
+        for sport, year in roster_group.items():
+            url = roster_url(sport, year)
+            # Use roster_table for all sports except men's tennis, artistic swimming, cross country and sailing.
             if sport in ["mens-tennis", "artswim", "cross-country", "sailing"]:
-                df = roster_dataset(f"{url}/2023", sport)
+                df = roster_dataset(url, sport)
             else:
-                df = roster_table(f"{url}/2023")
+                df = roster_table(url)
+            print(df)
             df.to_csv(f"{group_name}/{sport}.csv", index=False)
 
 
 if __name__ == "__main__":
-    format_to_flourish()
+    write_datasets()
+
+# in the legend, put indicator for number of people on the team

@@ -1,34 +1,34 @@
 #,Full Name,Pos.,Ht.,Wt.,Academic Year,Hometown / High School,Previous School,Major,Major (Abbreviated)
 0,Gaethan Bernadel,Inside Linebacker,6-1,227,Jr.,"Miami, Fla. / Hallandale",Florida International,Communication,COMM
-0,Mudia Reuben,Wide Receiver,6-2,205,So.,"Kansas City, Mo. / Park Hill South",,Undeclared,Undeclared
+0,Mudia Reuben,Wide Receiver,6-2,205,So.,"Kansas City, Mo. / Park Hill South",,"Science, Technology & Society",STS
 2,Casey Filkins,Running Back,5-11,206,Sr.,"Lake Oswego, Ore. / Lake Oswego",,Psychology,PSYCH
 3,Bryce Farrell,Wide Receiver,5-10,180,Sr.,"Thousand Oaks, Calif. / Oaks Christian School",,Economics,ECON
 4,Zahran Manley,Cornerback,6-2,189,5th,"Claremont, Calif. / Upland",,"Science, Tech. and Society",STS
 5,John Humphreys,Wide Receiver,6-5,198,Sr.,"Newport Beach, Calif. / Corona del Mar",,Economics,ECON
-6,Collin Wright,Cornerback,6-0,192,So.,"Missouri City, Texas / Manvel",,Undeclared,Undeclared
-8,Justin Lamson,Quarterback,6-2,215,So.,"El Dorado Hills, Calif. / Oak Ridge",Syracuse,,
+6,Collin Wright,Cornerback,6-0,192,So.,"Missouri City, Texas / Manvel",,Communication,COMM
+8,Justin Lamson,Quarterback,6-2,215,So.,"El Dorado Hills, Calif. / Oak Ridge",Syracuse,Sociology,SOC
 8,Tristan Sinclair,Inside Linebacker,6-1,221,5th,"Alamo, Calif. / San Ramon Valley",,"Computer Science (MS, BS)",CS
-9,Aaron Armitage,Outside Linebacker,6-5,260,Jr.,"Ajax, Ontario, Canada / Blair Academy (N.J.)",,Undeclared,Undeclared
+9,Aaron Armitage,Outside Linebacker,6-5,260,Jr.,"Ajax, Ontario, Canada / Blair Academy (N.J.)",,"Science, Technology & Society",STS
 9,Myles Jackson,Quarterback,6-2,190,Fr.,"Lakewood, Calif. / Millikan",,,
 10,Spencer Jorgensen,Inside Linebacker,6-3,233,5th,"Provo, Utah / Provo",,Symbolic Systems,SYMSYS
 10,Beau Nelson,Quarterback,6-2,207,Sr.,"Boise, Idaho / Bishop Kelly",,Management Science and Engineering,MS&E
 11,Ari Patu,Quarterback,6-4,216,Jr.,"Folsom, Calif. / Folsom",,Undeclared,Undeclared
 11,Tevarua Tafiti,Outside Linebacker,6-2,235,So.,"Waipahu, Hawaii / Punahou School",,Undecided,Undeclared
 13,Elic Ayomanor,Wide Receiver,6-2,210,R-Fr.,"Medicine Hat, Alberta, Canada / Deerfield Academy (Mass.)",,Undeclared,Undeclared
-13,Emmet Kenney,Kicker,6-2,215,Jr.,"Fargo, N.D. / Shanley",,Undeclared,Undeclared
-14,Wilfredo Aybar,Outside Linebacker,6-2,252,Jr.,"Fall River, Mass. / Cheshire Academy",,Undeclared,Undeclared
+13,Emmet Kenney,Kicker,6-2,215,Jr.,"Fargo, N.D. / Shanley",,"Science, Technology & Society",STS
+14,Wilfredo Aybar,Outside Linebacker,6-2,252,Jr.,"Fall River, Mass. / Cheshire Academy",,Management Science and Engineering,MS&E
 14,Ashton Daniels,Quarterback,6-2,215,So.,"Buford, Ga. / Buford",,Undeclared,Undeclared
 15,Ryan Butler,Running Back,5-11,225,So.,"Plainfield, N.J. / Bergen Catholic",Princeton,,
-15,Connor Weselman,Punter,6-3,216,Jr.,"Atlanta, Ga. / Westminster School",,Undeclared,Undeclared
+15,Connor Weselman,Punter,6-3,216,Jr.,"Atlanta, Ga. / Westminster School",,"Science, Technology & Society",STS
 17,Jshawn Frausto-Ramos,Cornerback,6-0,184,Fr.,"Los Angeles, Calif. / St. John Bosco",,,
 17,Charlie Mirer,Quarterback,6-6,235,So.,"Rancho Santa Fe, Calif. / Cathedral Catholic",,Undeclared,Undeclared
-18,Jimmy Wyrick,Safety,5-10,183,Jr.,"Dallas, Texas / South Oak Cliff",,Undeclared,Undeclared
+18,Jimmy Wyrick,Safety,5-10,183,Jr.,"Dallas, Texas / South Oak Cliff",,Economics,ECON
 19,Silas Starr,Wide Receiver,6-2,221,Sr.,"Portland, Ore. / Central Catholic",,Psychology,PSYCH
 20,Jaden Slocum,Cornerback,6-1,200,Jr.,"Alpharetta, Ga. / Alpharetta",,Undeclared,Undeclared
 21,Scotty Edwards,Safety,6-1,205,So.,"Holladay, Utah / Olympus",,Undeclared,Undeclared
 22,Ché Ojarikre,Safety,6-2,180,Fr.,"Alpharetta, Ga. / Denmark",,,
 22,E.J. Smith,Running Back,6-0,210,Sr.,"Dallas, Texas / Jesuit College Prep",,"Science, Tech. and Society",STS
-23,David Bailey,Outside Linebacker,6-3,240,So.,"Irvine, Calif. / Mater Dei",,Undeclared,Undeclared
+23,David Bailey,Outside Linebacker,6-3,240,So.,"Irvine, Calif. / Mater Dei",,"Science, Technology & Society",STS
 23,Jacob Lowe,Running Back,6-0,230,So.,"Orange City, Fla. / University",,Undeclared,Undeclared
 24,Tiger Bachmeier,Wide Receiver,6-1,190,Fr.,"Lake Elsinore, Calif. / Murrieta Valley",,Undeclared,Undeclared
 25,Ismael Cisse,Wide Receiver,6-0,180,Fr.,"Denver, Colo. / Cherry Creek",,,
@@ -36,9 +36,9 @@
 27,Omari Porter,Safety,6-2,205,Sr.,"Auburn, Ala. / Auburn",,Bioengineering,BIOE
 28,Joshua Thompson,Cornerback,6-1,207,So.,"Upper Marlboro, Md. / St. John's College (D.C.)",,Undeclared,Undeclared
 29,Terian Williams,Cornerback,5-8,184,So.,"Duluth, Ga. / Johns Creek",,Undeclared,Undeclared
-30,Ese Dubre,Inside Linebacker,6-2,245,Jr.,"Powder Springs, Ga. / McEachern",,Undeclared,Undeclared
+30,Ese Dubre,Inside Linebacker,6-2,245,Jr.,"Powder Springs, Ga. / McEachern",,"Science, Technology & Society",STS
 31,Aaron Morris,Cornerback,5-11,186,Fr.,"Lowell, Mass. / Phillips Exeter Academy (N.H.)",,,
-32,Mitch Leigber,Safety,6-1,202,Jr.,"Laguna Hills, Calif. / Laguna Hills",,Undeclared,Undeclared
+32,Mitch Leigber,Safety,6-1,202,Jr.,"Laguna Hills, Calif. / Laguna Hills",,Communications,COMM
 33,Alaka'i Gilman,Safety,5-10,194,Sr.,"Laie, Hawaii / Punahou School",,"Science, Tech. and Society",STS
 33,Kenaj Washington,Running Back,5-7,155,So.,"Kennedale, Texas / Kennedale",,Undeclared,Undeclared
 34,Caleb Hampton,Running Back,5-10,208,Fr.,"Ooltewah, Tenn. / The Baylor School",,,
@@ -46,8 +46,8 @@
 36,Tre Williams,Outside Linebacker,6-2,225,Fr.,"Farmers Branch, Texas / Parish Episcopal School",,,
 37,Aidan Flintoft,Punter/Kicker,6-2,194,Fr.,"Pacific Palisades, Calif. / Oaks Christian School",,,
 37,Myles Libman,Wide Receiver,6-0,185,Fr.,"Scottsdale, Ariz. / Pinnacle",,,
-38,Brendon Barrow,Running Back,5-8,180,Jr.,"Etobicoke, Ontario, Canada / Clearwater Academy International (Fla.)",,Undeclared,Undeclared
-38,Kale Lucas,Safety,6-0,194,Jr.,"Farmington, N.M. / Farmington",,Undeclared,Undeclared
+38,Brendon Barrow,Running Back,5-8,180,Jr.,"Etobicoke, Ontario, Canada / Clearwater Academy International (Fla.)",,"Science, Technology & Society",STS
+38,Kale Lucas,Safety,6-0,194,Jr.,"Farmington, N.M. / Farmington",,Management Science and Engineering,MS&E
 39,Brayden Hagle,Wide Receiver,6-1,190,Fr.,"Los Angeles, Calif. / Lovejoy",,,
 39,Tyler Kuo,Wide Receiver,6-3,202,Fr.,"Austin, Texas / Regents School of Austin",,,
 40,Tobin Phillips,Defensive Line,6-3,295,Sr.,"Fresno, Calif. / San Joaquin Memorial",,Human Biology,HUMBIO
@@ -61,7 +61,7 @@
 47,Alejandro Chavez,Long Snapper,6-2,240,So.,"West Covina, Calif. / Bishop Amat",,Undeclared,Undeclared
 47,Caleb Ellis,Cornerback,6-0,191,Jr.,"McKinney, Texas / Independence",,Undeclared,Undeclared
 48,Benjamin Hudson,Inside Linebacker,6-2,219,So.,"Las Vegas, Nev. / Bishop Gorman",,Undeclared,Undeclared
-49,Evan Jackson,Wide Receiver,5-9,178,Jr.,"McDonough, Ga. / Eagle’s Landing",,Undeclared,Undeclared
+49,Evan Jackson,Wide Receiver,5-9,178,Jr.,"McDonough, Ga. / Eagle’s Landing",,"Science, Technology & Society",STS
 49,Adam Rourke,Defensive Back,6-0,195,Fr.,"Dallas, Texas / Highland Park HS",,,
 50,R.J. Gaskins,Defensive Line,6-3,265,Fr.,"Mclean, Va. / Gonzaga College",,,
 51,Jaxson Moi,Defensive Line,6-2,303,So.,"Oceanside, Calif. / Cathedral Catholic",,Undeclared,Undeclared
@@ -74,25 +74,25 @@
 57,Spencer Lytle,Inside Linebacker,6-2,230,Jr.,"Bellflower, Calif. / St. John Bosco",Wisconsin,,
 57,Levi Rogers,Offensive Line,6-4,301,Sr.,"Woodinville, Wash. / Woodinville",,Communication,COMM
 58,Alec Bank,Offensive Line,6-4,303,Jr.,"Hoboken, N.J. / Tesoro",Harvard,,
-61,Trevor Mayberry,Offensive Line,6-3,315,Jr.,"Tampa, Fla. / Jesuit",Penn,Undeclared,Undeclared
+61,Trevor Mayberry,Offensive Line,6-3,315,Jr.,"Tampa, Fla. / Jesuit",Penn,"Science, Technology & Society",STS
 65,Allen Thomason,Offensive Line,6-5,275,Fr.,"Little Rock, Ark. / Pulaski Academy",,,
 67,Fisher Anderson,Offensive Line,6-6,294,So.,"Franklin, Tenn. / Franklin",,Undeclared,Undeclared
 69,Jake Maikkula,Offensive Line,6-5,290,So.,"Sedalia, Colo. / Valor Christian School",,Undeclared,Undeclared
 71,Connor McLaughlin,Offensive Line,6-7,295,Sr.,"Tampa, Fla. / Jesuit",,"Science, Tech. and Society",STS
-72,Austin Uke,Offensive Line,6-2,290,Jr.,"Cedar Hill, Texas / Parish Episcopal School",,Undeclared,Undeclared
+72,Austin Uke,Offensive Line,6-2,290,Jr.,"Cedar Hill, Texas / Parish Episcopal School",,"Science, Technology & Society",STS
 73,Charlie Symonds,Offensive Line,6-8,300,Fr.,"South Kent, Conn. / Taft School",,,
 74,James Pogorelc,Offensive Line,6-8,302,Sr.,"Centreville, Va. / Chantilly",,Economics,ECON
 75,Braden Marceau-Olayinka,Defensive Line,6-3,260,Fr.,"Melrose, Mass. / Melrose",,,
-76,Jack Leyrer,Offensive Line,6-5,310,Jr.,"Dallas, Texas / Highland Park",,Undeclared,Undeclared
+76,Jack Leyrer,Offensive Line,6-5,310,Jr.,"Dallas, Texas / Highland Park",,"Science, Technology & Society",STS
 77,Logan Berzins,Offensive Line,6-3,295,Sr.,"San Diego, Calif. / Cathedral Catholic",,Economics,ECON
 78,Luke Baklenko,Offensive Line,6-6,295,Fr.,"Thousand Oaks, Calif. / Oaks Christian School",,,
-80,David Kasemervisz,Wide Receiver,6-0,195,Jr.,"Sugar Land, Texas / Fort Bend Christian",,Undeclared,Undeclared
+80,David Kasemervisz,Wide Receiver,6-0,195,Jr.,"Sugar Land, Texas / Fort Bend Christian",,Bioengineering,BIOE
 81,Ahmari Borden,Wide Receiver,6-3,185,Fr.,"Bainbridge, Ga. / Munroe Day School (Fla.)",,,
-82,Jayson Raines,Wide Receiver,6-3,213,Jr.,"West Orange, N.J. / West Orange",,Undeclared,Undeclared
+82,Jayson Raines,Wide Receiver,6-3,213,Jr.,"West Orange, N.J. / West Orange",,Management Science and Engineering,MS&E
 83,Jackson Harris,Wide Receiver,6-3,190,Fr.,"Berkeley, Calif. / Berkeley",,,
 84,Benjamin Yurosek,Tight End,6-4,242,Sr.,"Bakersfield, Calif. / Bakersfield Christian",,"Science, Tech. and Society",STS
-85,Shield Taylor,Tight End,6-3,248,Jr.,"Alexandria, La. / Alexandria Senior",,Undeclared,Undeclared
-86,Sam Roush,Tight End,6-5,242,So.,"Nashville, Tenn. / Lipscomb Academy",,Undeclared,Undeclared
+85,Shield Taylor,Tight End,6-3,248,Jr.,"Alexandria, La. / Alexandria Senior",,Psychology,PSYCH
+86,Sam Roush,Tight End,6-5,242,So.,"Nashville, Tenn. / Lipscomb Academy",,Computer Science,CS
 87,Jason Thompson,Wide Receiver,5-10,179,So.,"Stevenson Ranch, Calif. / Harvard-Westlake",,Undeclared,Undeclared
 88,C.J. Hawkins,Tight End,6-5,238,So.,"Tampa, Fla. / Berkeley Prep",,Undeclared,Undeclared
 89,Lukas Ungar,Tight End,6-4,244,Sr.,"Mendham, N.J. / Delbarton School",,"Science, Tech. and Society",STS
@@ -100,8 +100,8 @@
 91,Pat Caughey,Defensive Line,6-5,264,So.,"Essex Fells, N.J. / Delbarton School",,Undeclared,Undeclared
 92,Lance Keneley,Outside Linebacker,6-4,250,Sr.,"Mission Viejo, Calif. / Mission Viejo",,Mechanical Engineering,ME
 93,Peyton Warford,Long Snapper,6-3,200,So.,"Woodside, Calif. / St. Francis",Northwestern,,
-94,Anthony Franklin,Defensive Line,6-3,281,Jr.,"Phoenix, Ariz. / Pinnacle",,Undeclared,Undeclared
-95,Aristotle Taylor,Defensive Line,6-7,260,Jr.,"Birmingham, Mich. / Brother Rice",,Undeclared,Undeclared
+94,Anthony Franklin,Defensive Line,6-3,281,Jr.,"Phoenix, Ariz. / Pinnacle",,Management Science and Engineering,MS&E
+95,Aristotle Taylor,Defensive Line,6-7,260,Jr.,"Birmingham, Mich. / Brother Rice",,Management Science and Engineering,MS&E
 97,Zach Rowell,Defensive Line,6-3,281,So.,"San Diego, Calif. / Torrey Pines",,Undeclared,Undeclared
-98,Zach Buckey,Defensive Line,6-3,260,Jr.,"Bakersfield, Calif. / Garces Memorial",,Undeclared,Undeclared
+98,Zach Buckey,Defensive Line,6-3,260,Jr.,"Bakersfield, Calif. / Garces Memorial",,Political Science & Communications,
 99,Zephron Lester,Defensive Line,5-11,297,Sr.,"Far Rockaway, N.Y. / Christ the King",,Sociology,SOC
