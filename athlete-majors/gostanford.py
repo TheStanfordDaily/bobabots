@@ -104,7 +104,7 @@ def roster_table(url: str) -> pd.DataFrame:
     return pd.DataFrame(data, columns=headers)
 
 
-def simplified_majors(major_counts):
+def simplified_majors(major_counts: pd.DataFrame) -> pd.DataFrame:
     # Sort and identify the top 10 most common majors.
     top_majors = major_counts.sort_values("Total Athletes", ascending=False).head(10)
 
@@ -186,8 +186,6 @@ def write_datasets():
 
 
 if __name__ == "__main__":
-    write_sport("men", "mens-rowing", 2024)
-    # for group in ["men", "women"]:
-    #     write_sport(group, "track-and-field", 2024, group)
+    format_to_flourish()
 
 # in the legend, put indicator for number of people on the team
