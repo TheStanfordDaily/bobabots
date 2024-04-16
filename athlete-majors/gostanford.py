@@ -178,6 +178,6 @@ def write_datasets():
 
 
 if __name__ == "__main__":
-    write_datasets()
+    format_to_flourish()
 
 # in the legend, put indicator for number of people on the team
