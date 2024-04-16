@@ -10,7 +10,7 @@ with open("subjects.json") as subjects_file:
     subject_abbreviations = json.load(subjects_file)
     subject_abbreviations["Undeclared"] = "Undeclared"
 
-with open("roster-urls.json") as roster_file:
+with open("roster-years.json") as roster_file:
     roster_urls = json.load(roster_file)
 
 
@@ -74,7 +74,6 @@ def roster_table(url: str) -> pd.DataFrame:
     response = requests.get(f"{url}?view=2", allow_redirects=True)
     soup = BeautifulSoup(response.text, "html.parser").find("div", class_="sidearm-roster-grid-template-1")
     # Find table with "Roster" in caption.
-    print(url)
     table = soup.find("caption", text=lambda text: "Roster" in text).find_parent("table")
     headers = [th.text for th in table.thead.find_all("th")]
 
@@ -175,7 +174,6 @@ def write_datasets():
                 df = roster_dataset(url, sport)
             else:
                 df = roster_table(url)
-            print(df)
             df.to_csv(f"{group_name}/{sport}.csv", index=False)
 
 
